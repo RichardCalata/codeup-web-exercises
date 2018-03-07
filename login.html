@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>login</title>
 </head>
 <body>
-
+    <form method="POST" action="https://requestb.in/xsz4ctxs">
+        <label for="username">username</label>
+        <input id ="username" name ="username" autofocus="autofocus" type="text" placeholder="username" required>
+        <br>
+        <br>
+        <label for="password">password</label>
+        <input id="password" name ="password" type="password" placeholder="password" required>
+        <br>
+        <br>
+        <label for="stayLoggedIn"></label>
+        <input id="stayLoggedIn" name="stayLoggedIn" value="true" type="checkbox" checked>Keep me logged in for two weeks.
+        <br>
+        <br>
+        <input type="submit">
+    </form>
 </body>
 </html>
