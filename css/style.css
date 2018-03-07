@@ -5,6 +5,11 @@ comment
 */
 
 .fancy-header {
-    color: #621c80; /* single line comment */
+    color: #808080; /* single line comment */
     text-decoration: underline;
+}
+
+.extra-large {
+
+    font-size: 50px
 }
