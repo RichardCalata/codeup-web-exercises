@@ -4,14 +4,20 @@ line
 comment
 */
 body {
-    background-image: url("../img/blue.jpg");
-    font-family:helvetica
+    background-image: url("../img/green.jpg");
+    font-family:helvetica, sans-serif
     }
 .fancy-header {
-    color: #4CAF50; /* single line comment */
+    color: #29a2aa; /* single line comment */
     text-decoration: underline;
     text-align:center;
 
+}
+
+h1, h2, h3, h4 {
+
+    text-decoration: underline;
+    color: #19851e
 }
 p {
     text-align:center
@@ -24,7 +30,7 @@ p {
 #prices {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
 }
 
 #prices td, #prices th {
@@ -40,10 +46,21 @@ p {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: #19851e;
     color: white;
 }
 
-/*ul {
-    list-style-image:url("../img/swirl.gif")
-}*/
+ul {
+    list-style: circle
+}
+
+footer {
+    color: white
+}
+
+a:link {
+    color: #19851e;
+}
+a:hover {
+    color: red
+}
