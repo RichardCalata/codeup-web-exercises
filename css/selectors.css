@@ -1,6 +1,10 @@
 
 
-body   {background-color: #ffaa30
+body   {
+
+    background-image: url("../img/blue.jpg");
+    background-color: #ff9f2c;
+
 }
 /* selector for id="container" */
 #container {
@@ -10,12 +14,13 @@ body   {background-color: #ffaa30
 }
 
 /*  selector for all "h1" elements
-    that are a descendent of id="container"
+    that are a descendant of id="container"
     and have a class of "fancy-header" */
 #container h1 {
     font-family:helvetica, arial, sans-serif;
     color: blue;
     text-decoration: underline;
+    margin-left:auto; margin-right: auto; width: 8em
 }
 
 /* selector for all "em" elements */
@@ -25,6 +30,7 @@ em {
 
 /* selector for all elements with class="article" */
 .article {
+    font-family:helvetica, arial, sans-serif;
     clear:both;
 }
 

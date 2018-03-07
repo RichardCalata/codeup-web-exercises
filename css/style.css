@@ -3,9 +3,11 @@ multi
 line
 comment
 */
-
+body {
+    background-image: url("../img/blue.jpg");
+    }
 .fancy-header {
-    color: #808080; /* single line comment */
+    color: rgba(220, 213, 72, 0.45); /* single line comment */
     text-decoration: underline;
 }
 
