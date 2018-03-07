@@ -1,6 +1,7 @@
 
 
-body   {background-color: orange}
+body   {background-color: #ffaa30
+}
 /* selector for id="container" */
 #container {
     margin: 50px auto;
