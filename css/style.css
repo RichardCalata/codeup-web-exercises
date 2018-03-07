@@ -5,13 +5,45 @@ comment
 */
 body {
     background-image: url("../img/blue.jpg");
+    font-family:helvetica
     }
 .fancy-header {
-    color: rgba(220, 213, 72, 0.45); /* single line comment */
+    color: #4CAF50; /* single line comment */
     text-decoration: underline;
-}
+    text-align:center;
 
+}
+p {
+    text-align:center
+}
 .extra-large {
 
     font-size: 50px
 }
+
+#prices {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#prices td, #prices th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#prices tr:nth-child(even){background-color: #f2f2f2;}
+
+#prices tr:hover {background-color: #ddd;}
+
+#prices th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*ul {
+    list-style-image:url("../img/swirl.gif")
+}*/
