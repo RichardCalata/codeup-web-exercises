@@ -1,0 +1,38 @@
+header {
+    background-color: #000;
+    color: #FFF;
+    width: 100%;
+    height: 10px;
+    border: solid 30px gray;
+    margin: 1px;
+}
+
+.top-nav-link {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px 10px; /*top right bottom left */
+    margin: 30px;
+    border: solid 30px gray;
+}
+
+.nav-item {
+
+    display: inline-block;
+    padding: 2px;
+    margin: 2px;
+    border: 20px;
+}
+
+.main-nav {
+    color: #818181;
+}
+
+.main-nav-link {
+    color: #000;
+    text-decoration: none;
+}

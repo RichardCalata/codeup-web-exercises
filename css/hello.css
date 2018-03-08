@@ -1,4 +1,18 @@
+body {
+
+    font-family: helvetica, arial, sans-serif;
+    margin-left: 50px
+}
+
+
 h1 {
     font-family: helvetica, arial, sans-serif;
     color: darkred;
+    text-align:center;
+    font-size: 50px
 }
+
+h2 {
+    font-family: helvetica, arial, sans-serif
+}
+
