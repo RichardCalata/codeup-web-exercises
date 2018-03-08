@@ -11,22 +11,20 @@ header {
 .top-nav-link {
     color: #FFF;
     text-decoration: none;
+    font-weight:bold;
 }
 
 .nav-links {
     list-style-type: none;
-    display: inline-block;
-    padding: 20px 10px; /*top right bottom left */
-    margin: 30px;
+    padding: 10px; /*top right bottom left */
+    margin: 20px;
     border: solid 30px gray;
 }
 
 .nav-item {
 
     display: inline-block;
-    padding: 2px;
-    margin: 2px;
-    border: 20px;
+
 }
 
 .main-nav {
@@ -36,4 +34,18 @@ header {
 .main-nav-link {
     color: #000;
     text-decoration: none;
+}
+
+tab-link {
+    color: red;
+}
+
+table {
+    border: solid 1px #aaa;
+
+}
+
+title-row {
+
+    background-color: #f6f8fa;
 }
