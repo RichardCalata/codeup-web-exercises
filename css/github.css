@@ -5,6 +5,7 @@ header {
     height: 10px;
     border: solid 3px #000;
     margin: 1px;
+    position: fixed;
 }
 
 .top-nav-link {

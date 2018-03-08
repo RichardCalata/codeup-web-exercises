@@ -1,0 +1,68 @@
+h1 {
+    font-family: "trebuchet", sans-serif;
+}
+
+h2 {
+    color: purple;
+    text-decoration: underline;
+    font-family: "Helvetica", sans-serif;
+
+}
+
+.box {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    font-weight: bold;
+    color: #FFF;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 50px;
+    float: left;
+}
+
+.box>img {
+    position: relative;
+    top: -45px;
+    left: 40px;
+}
+
+.box:nth-child(5) {
+
+    clear: left;
+}
+#box-red {
+    background-color: red;
+    float: left;
+
+}
+
+#box-orange {
+    background-color: orange;
+    /*margin-left: 30px;*/
+
+}
+
+#box-yellow {
+    background-color: yellow;
+    /*margin-left: 30px;*/
+}
+
+#box-green {
+    background-color: green;
+    /*margin-left: 30px;*/
+
+
+}
+
+#box-blue {
+    background-color: blue;
+    /*margin-left: 30px;*/
+}
+
+#box-violet{
+    background-color: purple;
+    /*margin-left: 30px;*/
+
+}
