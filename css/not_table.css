@@ -1,0 +1,30 @@
+
+body {
+    font-family: "helvetica", sans-serif;
+}
+
+.side-nav {
+     background-color: #9A9F90;
+     height: 100%;
+     width: 210px;
+     position: fixed;
+     /*z-index: 1;*/
+     top: 0;
+     left: 0;
+     /*overflow-x: hidden;*/
+     padding-top: 20px;
+     /*float: left;*/
+ }
+
+h1 {
+    color: #5E7361;
+}
+
+.main {
+    background-color: #D3D8C9;
+    margin-left: 200px; /* Same as the width of the sidenav */
+    /*margin-top: 0px;*/
+    /*margin-bottom: 0px;*/
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 20px 20px;
+}
