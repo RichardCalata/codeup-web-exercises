@@ -1,0 +1,157 @@
+
+
+.alert-info-hidden-on-desktop {
+    text-align: center;
+    display: block;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+ul.nav-links{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    background-color: #CCCCCC;
+    width: 87%;
+    height: 20px;
+    margin: 11px;
+    margin-left: 5px;
+    text-align: center;
+
+
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+.header-img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.header-img img{
+    height: 224px;
+    width: 390px;
+    /*overflow-x: hidden;*/
+    /*overflow-y: hidden;*/
+    /*height: 224px;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main>p{
+    padding: 10px;
+    margin: 10px;
+}
+
+.sub-section>p{
+    padding: 10px;
+    margin: 10px;
+
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+
+
+}
+
+    @media screen and (min-width:768px) {
+
+            h1 {
+                text-align: left;
+                color: red;
+                width: 30%;
+                margin: 20px;
+                float: left;
+        }
+
+                .alert-info-hidden-on-desktop {
+                    display: none;
+                }
+
+
+        .header-img {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+
+        .header-img img{
+            height: 385px;
+            width: 890px;
+            /*overflow-x: hidden;*/
+            /*overflow-y: hidden;*/
+            /*height: 224px;*/
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            nav {
+                right: 0px;
+            }
+
+
+            .nav-links {
+
+                color: red;
+                display: inline;
+            }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: right;
+            background-color: #FFFFFF;
+            width: 10%;
+            height: 20px;
+            margin: 11px;
+            margin-left: 5px;
+            text-align: right;
+        }
+
+        li a {
+            display: block;
+            /*color: black;*/
+            text-align: center;
+            padding: 0px 0px;
+            text-decoration: underline;
+        }
+
+        .main {
+            width: 50%;
+            float: left;
+
+        }
+
+        .sub-section {
+            width: 50%;
+            margin-left: 50%;
+        }
+
+
+    }

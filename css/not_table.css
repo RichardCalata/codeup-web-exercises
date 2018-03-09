@@ -1,6 +1,7 @@
 
 body {
-    font-family: "helvetica", sans-serif;
+    font-family: "Trebuchet MS","verdana", sans-serif;
+    background-color: #D3D8C9;
 }
 
 .side-nav {
@@ -12,19 +13,30 @@ body {
      top: 0;
      left: 0;
      /*overflow-x: hidden;*/
-     padding-top: 20px;
+     padding-top: 15px;
+     /*padding-left: 10px;*/
      /*float: left;*/
  }
 
+ul {
+     list-style: none;
+
+}
+
+li {
+    text-indent: 2em;
+}
 h1 {
     color: #5E7361;
+    /*font-size: 30px;*/
 }
 
 .main {
-    background-color: #D3D8C9;
-    margin-left: 200px; /* Same as the width of the sidenav */
+    /*height: 100%;*/
+    margin-left: 200px; /* Same as the width of the side-nav +10px */
     /*margin-top: 0px;*/
     /*margin-bottom: 0px;*/
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 20px 20px;
+    /*font-size: 28px; !* Increased text to enable scrolling *!*/
+    padding: 1px 20px;
+
 }
