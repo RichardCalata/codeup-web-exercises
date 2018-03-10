@@ -12,6 +12,7 @@ comment
 
 
 body {
+    background-image: url("../img/green-gradient.svg");
    /* background-image: url("../img/green-grad.jpg"); */
     font-family:helvetica, sans-serif;
     margin-left: 50px;
@@ -53,7 +54,7 @@ body {
     margin-left: 150px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 10px 10px;
-    background-image: url("../img/green-gradient.svg");
+    /*background-color: red;*/
 }
 
 
