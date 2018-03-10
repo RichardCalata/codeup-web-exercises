@@ -34,9 +34,10 @@ h1 {
     text-decoration: none;
 }
 
-/*ul {*/
-    /*list-style: none;
-}*/
+ul {
+    display: inline;
+    list-style: none;
+}
 
 ul.nav-links{
     text-align: center;
