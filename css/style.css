@@ -3,15 +3,24 @@ multi
 line
 comment
 */
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
 body {
    /* background-image: url("../img/green-grad.jpg"); */
     font-family:helvetica, sans-serif;
-    margin-left: 75px;
+    margin-left: 50px;
     margin-right: 75px;
-    margin-top: 50px
+    margin-top: 0;
     }
+
 .fancy-header {
-    color: #4f2080; /* single line comment */
+    color: #4f2080;
     text-decoration: underline;
     text-align:center;
 
@@ -40,7 +49,7 @@ body {
 
 
 .main {
-    top: 0px;
+    top: 0;
     margin-left: 150px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 10px 10px;
