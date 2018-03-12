@@ -2,20 +2,17 @@
     color: #cbcbcb;
     box-sizing: border-box;
     font-family: "Trebuchet MS", "verdana", sans-serif;
+    font-weight: bold;
 }
 .container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1600px;
 
-    border: 2px solid rgba(116, 116, 116, 0.96);
+    border: 2px solid rgba(120, 120, 120, 0.96);
     text-align: center;
     color: #9a9a9a;
     background-color: #111111;
 }
 
 .row {
-    width:100%;
 
     text-align: center;
 }
@@ -33,63 +30,66 @@
     width: 100%;
 
 }
-.column.one-half {
-    /*width: 100%;*/
+.one-half {
     background-color: #222222;
     padding: 0;
 }
 
-.column.one-third {
+.one-third {
     background-color: #414141;
-    /*width: 100%;*/
 }
 
-.column.one-fourth {
+.one-fourth {
     background-color: #686868;
-    /*width: 100%;*/
 }
 
-.column.one-eighth {
+.one-eighth {
     background-color: #a0a0a0;
-    /*width:100%;*/
 }
 
 @media screen and (min-width: 425px) {
 
-    .column.one-eighth {
+    .one-eighth {
         width: 50%;
         color: yellow;
+        font-size: 20px;
     }
 }
 
-@media screen and (min-width: 600px) {
-    .column.one-fourth {
+@media screen and (min-width: 660px) {
+    .one-fourth {
         width: 50%;
         color: yellow;
+        font-size: 20px;
     }
 
-    .column.one-eighth {
+    .one-eighth {
         width: 12.5%;
         color: darkorange;
+        font-size: 20px;
     }
 }
 
-@media screen and (min-width: 800px) {
-    .column.one-third {
+@media screen and (min-width: 900px) {
+    .one-third {
         width: 33.3333%;
         color: yellow;
+        font-size: 20px;
     }
-    .column.one-half {
+    .one-half {
         width: 50%;
-        color: yellow;
+        color: green;
+        font-size: 20px;
 
     }
-    .column.one-fourth {
+    .one-fourth {
         width: 25%;
         color: darkorange;
+        font-size: 20px;
     }
 
-    .column.one-eighth {
+    .one-eighth {
         color: red;
+        font-size: 20px;
     }
 }
