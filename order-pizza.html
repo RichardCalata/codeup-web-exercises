@@ -9,7 +9,7 @@
         <!-- Your custom styles go here -->
         <style>
             main.container {
-                background-color: #b4b4b4;
+                background-color: #eaeaea;
             }
         </style>
         <link rel="stylesheet" href="css/pizza.css">
@@ -67,20 +67,20 @@
             </li>
 
         </ul>
-        <div class="card-body" style="width: 100%;">
+        <div class="card-body outer" style="width: 100%;">
             <h5 class="card-title">Choose size and crust</h5>
             <div class="card" style="width: 100%;">
                 <!--<img class="card-img-top" src="..." alt="Card image cap">-->
-                <div class="card-body">
+                <div class="card-body inner">
                     <h5 class="card-title">Hand Tossed</h5>
                     <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
                     <ul class="list-group">
-                        <li class="list-group-item"><input type="radio" id="crust"
+                        <li class="list-group-item"><input type="radio" id="ht-sm"
                                                            name="crust" value="crust">
-                            <label for="crust">Small(10")</label></li>
-                        <li class="list-group-item"><input type="radio" id="crust"
+                            <label for="ht-sm">Small(10")</label></li>
+                        <li class="list-group-item"><input type="radio" id="ht-md"
                                                            name="crust" value="crust">
-                            <label for="crust">Medium(12")</label></li>
+                            <label for="ht-md">Medium(12")</label></li>
                     </ul>
                 </div>
             </div>
@@ -90,12 +90,12 @@
                     <h5 class="card-title">Crispy Thin</h5>
                     <p class="card-text">Thin enough for optimum crispy to crunchy ratio</p>
                     <ul class="list-group">
-                        <li class="list-group-item"><input type="radio" id="crust"
+                        <li class="list-group-item"><input type="radio" id="c-md"
                                                            name="crust" value="crust">
-                            <label for="crust">Medium(12")</label></li>
-                        <li class="list-group-item"><input type="radio" id="crust"
+                            <label for="c-md">Medium(12")</label></li>
+                        <li class="list-group-item"><input type="radio" id="c-lg"
                                                            name="crust" value="crust">
-                            <label for="crust">Large(14")</label></li>
+                            <label for="c-lg">Large(14")</label></li>
                     </ul>
                 </div>
                 <div class="card-footer">
@@ -104,7 +104,7 @@
 
             </div>
         </div>
-        <div class="card-body" style="width: 100%;">
+        <div class="card-body outer" style="width: 100%;">
             <h5 class="card-title">Choose Cheese and Sauce</h5>
             <div class="card" style="width: 100%;">
                 <!--<img class="card-img-top" src="..." alt="Card image cap">-->
@@ -114,8 +114,8 @@
                     <form>
 
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Cheese</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <label for="cheese" id="cheese">Cheese</label>
+                            <select class="form-control">
                                 <option>Light</option>
                                 <option>Normal</option>
                                 <option>Extra</option>
@@ -133,8 +133,8 @@
                     <form>
 
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Sauce</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <label for="sauce" id="sauce">Sauce</label>
+                            <select class="form-control">
                                 <option>Tomato Sauce</option>
                                 <option>Marinara</option>
                                 <option>BBQ Sauce</option>
@@ -151,70 +151,34 @@
 
             </div>
         </div>
-        <div class="card-body" style="width: 100%;">
-            <h5 class="card-title">Choose size and crust</h5>
-            <div class="card" style="width: 100%;">
-                <!--<img class="card-img-top" src="..." alt="Card image cap">-->
-                <div class="card-body">
-                    <h5 class="card-title">Hand Tossed</h5>
-                    <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
-                    <ul class="list-group">
-                        <li class="list-group-item"><input type="radio" id="crust"
-                                                           name="crust" value="crust">
-                            <label for="crust">Small(10")</label></li>
-                        <li class="list-group-item"><input type="radio" id="crust"
-                                                           name="crust" value="crust">
-                            <label for="crust">Medium(12")</label></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card" style="width: 100%;">
-                <!--<img class="card-img-top" src="..." alt="Card image cap">-->
-                <div class="card-body">
-                    <h5 class="card-title">Crispy Thin</h5>
-                    <p class="card-text">Thin enough for optimum crispy to crunchy ratio</p>
-                    <ul class="list-group">
-                        <li class="list-group-item"><input type="radio" id="crust"
-                                                           name="crust" value="crust">
-                            <label for="crust">Medium(12")</label></li>
-                        <li class="list-group-item"><input type="radio" id="crust"
-                                                           name="crust" value="crust">
-                            <label for="crust">Large(14")</label></li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary" style="float: right">Next Step</a>
-                    <a href="#" class="btn btn-primary" style="float: right">Previous Step</a>
-                </div>
-            </div>
-        </div>
-        <div class="card-body" style="width: 100%;">
+
+        <div class="card-body outer" style="width: 100%;">
             <h5 class="card-title">Choose Toppings</h5>
             <div class="card" style="width: 100%;">
                 <!--<img class="card-img-top" src="..." alt="Card image cap">-->
                 <div class="card-body">
                     <h5 class="card-title">Choose Meats</h5>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
+                        <input class="form-check-input" type="checkbox" value="" id="beef">
+                        <label class="form-check-label" for="beef">
                             Beef
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                        <label class="form-check-label" for="defaultCheck2">
+                        <input class="form-check-input" type="checkbox" value="" id="ham">
+                        <label class="form-check-label" for="ham">
                             Ham
                         </label></div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                        <label class="form-check-label" for="defaultCheck2">
+                        <input class="form-check-input" type="checkbox" value="" id="philsteak">
+                        <label class="form-check-label" for="philsteak">
                             Philly Steak
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                        <label class="form-check-label" for="defaultCheck2">
+                        <input class="form-check-input" type="checkbox" value="" id="bacon">
+                        <label class="form-check-label" for="bacon">
                             Bacon
                         </label>
                     </div>
@@ -226,26 +190,26 @@
                     <h5 class="card-title">Choose Non-Meats</h5>
                     <p class="card-text">Thin enough for optimum crispy to crunchy ratio</p>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                        <label class="form-check-label" for="defaultCheck2">
+                        <input class="form-check-input" type="checkbox" value="" id="gpepper">
+                        <label class="form-check-label" for="gpepper">
                             Green Peppers
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                        <label class="form-check-label" for="defaultCheck2">
+                        <input class="form-check-input" type="checkbox" value="" id="mushroom">
+                        <label class="form-check-label" for="mushroom">
                             Mushrooms
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                        <label class="form-check-label" for="defaultCheck2">
+                        <input class="form-check-input" type="checkbox" value="" id="onion">
+                        <label class="form-check-label" for="onion">
                             Onions
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                        <label class="form-check-label" for="defaultCheck2">
+                        <input class="form-check-input" type="checkbox" value="" id="jalepeno">
+                        <label class="form-check-label" for="jalepeno">
                             Jalepeno Peppers
                         </label>
                     </div>
