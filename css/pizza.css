@@ -1,3 +1,8 @@
+body {
+    box-sizing: border-box;
+}
+
+
 .jumbotron {
     background-image: url("../img/pizza.png");
     text-align: center;
@@ -8,7 +13,10 @@
 .display-4 {
     background-color: #FFFFFF;
     opacity: 0.5;
-    width: 100%;
+    /*width: 100%;*/
 
 }
 
+.btn-primary {
+    width: 20%;
+}
