@@ -1,0 +1,104 @@
+/** {*/
+    /*margin:0;*/
+    /*padding: 0;*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+
+body {
+    background-color: #e6e6e6;
+}
+
+nav {
+    background-color: white;
+    margin-top: 4em;
+    text-align: center;
+
+}
+
+/**/
+
+.wide {
+    display: inline-block;
+
+}
+
+.main-logo {
+    width: 105px;
+    height: 105px;
+    margin-left: 0 auto;
+}
+
+.wide .main-logo {
+
+    margin: 0 auto;
+    display: block;
+}
+.nav-text {
+    float: none;
+    font-size: 3em;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    padding:0;
+
+}
+
+nav ul>li{
+    display: inline-block;
+    padding: 1em;
+
+}
+
+.jumbotron {
+    background-color: #e6e6e6;
+}
+
+.circle {
+    border: 4px solid white;
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+}
+
+.circle-red {
+    background-color: #e6563b;
+}
+
+.circle-yellow {
+    background-color: #DEA03D;
+}
+
+.circle-green {
+    background-color: #7cb06c;
+}
+
+.circle-blue {
+    background-color: #00aba9;
+
+}
+
+.circle h3 {
+    color: #535353;
+    margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+
+    /*nav {*/
+        /*text-align: center;*/
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+
+    /*}*/
+
+    .main-logo {
+
+        float:left;
+    }
+
+    .codeup-logo, .nav-text {
+        float: left;
+    }
+}
