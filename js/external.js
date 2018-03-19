@@ -8,7 +8,7 @@
 // 3. Output
 
 
-console.log("hello from external JavaScripr");
+console.log("hello from external JavaScript");
 
 
 
