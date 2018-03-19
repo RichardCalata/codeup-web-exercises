@@ -1,0 +1,28 @@
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ol {
+    padding: 0;
+}
+
+.title-banner {
+    background-color: #67AC5B;
+    width: 100%;
+    margin-left: 0;
+    margin-right:0;
+}
+
+li {
+
+    padding: 0;
+    /* what goes here? */
+}
