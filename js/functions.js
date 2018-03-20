@@ -87,8 +87,10 @@ var bill = parseFloat(prompt("bill"));
 var tipPercent = parseFloat(prompt("percentage to tip"));
 var tip =calculateTip(tipPercent, bill);
 
-console.log(tip);
+var total = bill + tip;
 
+console.log(tip);
+alert("your total is " + total);
 
 /**
  * TODO:
@@ -108,6 +110,7 @@ console.log(tip);
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
 function applyDiscount(price, discount) {
 
     var discountAmount = price * discount;
