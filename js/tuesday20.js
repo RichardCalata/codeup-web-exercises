@@ -81,3 +81,47 @@ function square(number) {
 }
 
 console.log(square(7));
+
+
+function cube(number) {
+
+    return number + " cubed is " + (number * number * number);
+
+}
+
+console.log(cube(3));
+
+
+function half(number) {
+
+    return "half of " + number + " is " + (number/2);
+}
+
+console.log(half(34));
+
+
+function double(number) {
+
+    return (number * 2) + " is " + number + " multiplied by two.";
+
+}
+
+console.log(double(42));
+
+function isValidPassword(password) {
+
+    return (password.length >= 5) && !(password.indexOf(" ") >= 0);
+
+}
+
+console.log(isValidPassword("astrongpassword"));
+
+function isRightTriangle(a,b,c) {
+
+    return "is this a right triangle? " + (((a * a) + (b * b)) === (c * c))
+
+}
+
+
+console.log(isRightTriangle(3, 4, 5));
+
