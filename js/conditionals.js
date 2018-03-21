@@ -73,69 +73,38 @@
 
 /* ########################################################################## */
 
-var luckyNumber = Math.floor(Math.random() * 6);
-
-alert("Your lucky Number is " + luckyNumber +", Good Luck!");
-
-var total = parseFloat(prompt("enter your total"));
-
-calculateTotal(luckyNumber, total);
-
-function calculateTotal(luckyNumber, total) {
-
-        var discount;
-
-        switch(luckyNumber) {
-            case 0: discount = 0;
-            break;
-            case 1: discount = .10;
-            break;
-            case 2: discount = .25;
-            break;
-            case 3: discount = .35;
-            break;
-            case 4: discount = .50;
-            break;
-            default: discount = 1;
-        }
-
-        var finalPrice = total - (total * discount);
-
-        return alert("Your discounted total is " + finalPrice);
-
-}
-
-/**
- * TODO:
- * Suppose there's a promotion in Walmart, each customer is given a randomly
- * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
- * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
- * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
- * all for free!.
- *
- * Write a function named `calculateTotal` that accepts a lucky number and total
- * amount, and returns the discounted price.
- *
- * Example:
- * calculateTotal(0, 100) // returns 100
- * calculateTotal(4, 100) // returns 50
- * calculateTotal(5, 100) // returns 0
- *
- * Test your function by passing it various values and checking for the expected
- * return value.
- */
-
-/**
- * TODO:
- * Uncomment the line below to generate a random number between 0 and 6.
- * Prompt the user for their total bill, then use your `calculateTotal` function
- * and alerts to display to the user what their lucky number was, what their
- * price before the discount was, and what their price after the discount is.
- */
-// Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
-
-//*******************************************************
+//
+// alert("Your lucky Number is " + luckyNumber +", Good Luck!");
+//
+// var total = parseFloat(prompt("enter your total"));
+//
+// calculateTotal(luckyNumber, total);
+//
+// function calculateTotal(luckyNumber, total) {
+//
+//         var discount;
+//
+//         switch(luckyNumber) {
+//             case 0: discount = 0;
+//             break;
+//             case 1: discount = .10;
+//             break;
+//             case 2: discount = .25;
+//             break;
+//             case 3: discount = .35;
+//             break;
+//             case 4: discount = .50;
+//             break;
+//             default: discount = 1;
+//         }
+//
+//         var finalPrice = total - (total * discount);
+//
+//         return alert("Your discounted total is " + finalPrice);
+//
+// }
+/**********************************************************************/
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -151,6 +120,35 @@ function calculateTotal(luckyNumber, total) {
  *
  * Can you refactor your code to use functions?
  */
+
+var enterANumber = confirm("wouldja like to enter a number?");
+
+        if(enterANumber) {
+
+            var number = prompt("Enter a number");
+            if(number%2>0){
+                alert(number + " is odd");
+            } else {
+
+                alert(number + " is even");
+            }
+
+            alert(number + " + 100 is " + (parseFloat(number) + 100));
+
+            if(number>0){
+
+                alert(number + " is positive");
+            } else {
+
+                alert(number + " is negative ");
+            }
+
+
+        } else {
+
+        alert(":(")
+}
+
 //
 // confirm("would you like to enter a number?");
 //
@@ -230,6 +228,38 @@ function calculateTotal(luckyNumber, total) {
  */
 
 /* ########################################################################## */
+
+/**
+ * TODO:
+ * Suppose there's a promotion in Walmart, each customer is given a randomly
+ * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
+ * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
+ * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
+ * all for free!.
+ *
+ * Write a function named `calculateTotal` that accepts a lucky number and total
+ * amount, and returns the discounted price.
+ *
+ * Example:
+ * calculateTotal(0, 100) // returns 100
+ * calculateTotal(4, 100) // returns 50
+ * calculateTotal(5, 100) // returns 0
+ *
+ * Test your function by passing it various values and checking for the expected
+ * return value.
+ */
+
+/**
+ * TODO:
+ * Uncomment the line below to generate a random number between 0 and 6.
+ * Prompt the user for their total bill, then use your `calculateTotal` function
+ * and alerts to display to the user what their lucky number was, what their
+ * price before the discount was, and what their price after the discount is.
+ */
+// Generate a random number between 0 and 6
+// var luckyNumber = Math.floor(Math.random() * 6);
+
+//*******************************************************
 
 
 
