@@ -1,109 +1,109 @@
 "use strict";
 
-// // I'll call this function inside the if-else
-// function isNumber(number) {
-//
-//     if (isNaN(parseFloat(number))) {
-//
-//         return false;
-//
-//     } else {
-//
-//         return true;
-//
-//     }
-// }
-//
-// var willEnterNumber = confirm("would you like to enter a number?");
-//
-//     if(willEnterNumber) {
-//
-//         var number = prompt("Enter a number");
-//         parseFloat(number);
-//
-//         if (!isNumber(number)) {
-//
-//             alert("enter a numerical number please");
-//
-//         } else {
-//
-//             if (number % 2 == 0) {
-//
-//                 alert(number + " is even");
-//
-//             } else {
-//
-//                 alert(number + " is odd");
-//
-//             }
-// alert(number + " + 100 is " + (parseFloat(number) +100));
-//         }
-//
-//         if(number>0) {
-//
-//             alert(number + " is positive");
-//         } else {
-//
-//             alert(number + " is negative");
-//         }
-//     }
+// I'll call this function inside the if-else
+function isNumber(number) {
 
-/* ########################################################################## */
-//
-// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// var randomColor = colors[Math.floor(Math.random() * colors.length)];
-//
-// var string = prompt("Enter a color");
-//
-// function analyzeColor(string) {
-//
-//         switch(string) {
-//
-//             case "blue": alert("BLUE! Blue is the color of the sky");
-//             break;
-//             case "red":  alert("RED!");
-//             break;
-//             default: alert(string + "?: is that really a color?");
-//
-//             }
-//
-// }
-//
-// analyzeColor(string);
+    if (isNaN(parseFloat(number))) {
+
+        return false;
+
+    } else {
+
+        return true;
+
+    }
+}
+
+var willEnterNumber = confirm("would you like to enter a number?");
+
+    if(willEnterNumber) {
+
+        var number = prompt("Enter a number");
+        parseFloat(number);
+
+        if (!isNumber(number)) {
+
+            alert("enter a numerical number please");
+
+        } else {
+
+            if (number % 2 == 0) {
+
+                alert(number + " is even");
+
+            } else {
+
+                alert(number + " is odd");
+
+            }
+alert(number + " + 100 is " + (parseFloat(number) +100));
+        }
+
+        if(number>0) {
+
+            alert(number + " is positive");
+        } else {
+
+            alert(number + " is negative");
+        }
+    }
 
 /* ########################################################################## */
 
-// var luckyNumber = Math.floor(Math.random() * 6);
-//
-// alert("Your lucky Number is " + luckyNumber +", Good Luck!");
-//
-// var total = parseFloat(prompt("enter your total"));
-//
-// calculateTotal(luckyNumber, total);
-//
-// function calculateTotal(luckyNumber, total) {
-//
-//         var discount;
-//
-//         switch(luckyNumber) {
-//             case 0: discount = 0;
-//             break;
-//             case 1: discount = .10;
-//             break;
-//             case 2: discount = .25;
-//             break;
-//             case 3: discount = .35;
-//             break;
-//             case 4: discount = .50;
-//             break;
-//             default: discount = 1;
-//         }
-//
-//         var finalPrice = total - (total * discount);
-//
-//         return alert("Your discounted total is " + finalPrice);
-//
-// }
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+var string = prompt("Enter a color");
+
+function analyzeColor(string) {
+
+        switch(string) {
+
+            case "blue": alert("BLUE! Blue is the color of the sky");
+            break;
+            case "red":  alert("RED!");
+            break;
+            default: alert(string + "?: is that really a color?");
+
+            }
+
+}
+
+analyzeColor(string);
+
+/* ########################################################################## */
+
+var luckyNumber = Math.floor(Math.random() * 6);
+
+alert("Your lucky Number is " + luckyNumber +", Good Luck!");
+
+var total = parseFloat(prompt("enter your total"));
+
+calculateTotal(luckyNumber, total);
+
+function calculateTotal(luckyNumber, total) {
+
+        var discount;
+
+        switch(luckyNumber) {
+            case 0: discount = 0;
+            break;
+            case 1: discount = .10;
+            break;
+            case 2: discount = .25;
+            break;
+            case 3: discount = .35;
+            break;
+            case 4: discount = .50;
+            break;
+            default: discount = 1;
+        }
+
+        var finalPrice = total - (total * discount);
+
+        return alert("Your discounted total is " + finalPrice);
+
+}
 /**********************************************************************/
 /**
  * TODO:
@@ -119,69 +119,35 @@
  * do *not* display any of the above information.
  *
  * Can you refactor your code to use functions?
- */
-
-var enterANumber = confirm("wouldja like to enter a number?");
-
-        if(enterANumber) {
-
-            var number = prompt("Enter a number");
-            if(number%2>0){
-                alert(number + " is odd");
-            } else {
-
-                alert(number + " is even");
-            }
-
-            alert(number + " + 100 is " + (parseFloat(number) + 100));
-
-            if(number>0){
-
-                alert(number + " is positive");
-            } else {
-
-                alert(number + " is negative ");
-            }
-
-
-        } else {
-
-        alert(":(")
-}
-
+//  */
 //
-// confirm("would you like to enter a number?");
+// var enterANumber = confirm("wouldja like to enter a number?");
 //
-// var input = parseInt(prompt("Enter a number"));
+//         if(enterANumber) {
 //
-// function isOdd(input) {
+//             var number = prompt("Enter a number");
+//             if(number%2>0){
+//                 alert(number + " is odd");
+//             } else {
 //
-//     return (input % 2) > 0;
+//                 alert(number + " is even");
+//             }
 //
-// // }
-// //
-// //     if(number) {
-// //
-// //         alert(number + " is even");
-// //
-// //     } else {
-// //
-// //         alert(number + " is odd");
-// //
-// //     }
-// //
-// //
-// //
-// //     if(number) {
-// //
-// //         alert(number + " is positive");
-// //
-// //
-// //     } else {
-// //
-// //         alert(number + " is negative");
-// //
-// //     }
+//             alert(number + " + 100 is " + (parseFloat(number) + 100));
+//
+//             if(number>0){
+//
+//                 alert(number + " is positive");
+//             } else {
+//
+//                 alert(number + " is negative ");
+//             }
+//
+//
+//         } else {
+//
+//         alert(":(")
+// }
 
 /************************************************************/
 
