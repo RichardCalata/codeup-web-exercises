@@ -14,6 +14,37 @@ function isNumber(number) {
     }
 }
 
+function isEvenOdd(number) {
+
+    if (number % 2 == 0) {
+
+        return number + " is even";
+
+    } else {
+
+        return number + " is odd";
+
+    }
+
+
+}
+
+function addHundred(number){
+    return number + " + 100 is " + (parseFloat(number) +100);
+
+}
+
+function isPositiveorNeg(number) {
+
+    if(number>0) {
+
+        return number + " is positive";
+    } else {
+
+        return number + " is negative";
+         }
+}
+
 var willEnterNumber = confirm("would you like to enter a number?");
 
     if(willEnterNumber) {
@@ -27,26 +58,16 @@ var willEnterNumber = confirm("would you like to enter a number?");
 
         } else {
 
-            if (number % 2 == 0) {
-
-                alert(number + " is even");
-
-            } else {
-
-                alert(number + " is odd");
+            alert(isEvenOdd(number));
 
             }
-alert(number + " + 100 is " + (parseFloat(number) +100));
+
+            alert(addHundred(number));
+
+        alert(isPositiveorNeg(number));
+
         }
 
-        if(number>0) {
-
-            alert(number + " is positive");
-        } else {
-
-            alert(number + " is negative");
-        }
-    }
 
 /* ########################################################################## */
 
@@ -99,9 +120,10 @@ function calculateTotal(luckyNumber, total) {
             default: discount = 1;
         }
 
+
         var finalPrice = total - (total * discount);
 
-        return alert("Your discounted total is " + finalPrice);
+        return alert("Your discounted total is $" + finalPrice.toFixed(2));
 
 }
 /**********************************************************************/

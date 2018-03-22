@@ -4,14 +4,23 @@
 //
 // var isSchedConflict = true
 
-var isClassOpen = confirm ("Is the class open?");
- console.log(isClassOpen);
-var isSchedConflict = confirm ("is there a schedule conflict?");
+// var isClassOpen = confirm ("Is the class open?");
+//  console.log(isClassOpen);
+// var freeOfConflict = confirm ("is there a schedule conflict?");
+//
+// // var canEnroll = true;
+//
+// var canEnroll = isClassOpen && freeOfConflict;
+//
+// console.log(canEnroll);
+//
+// alert(canEnroll);
 
-// var canEnroll = true;
+var x = 1;
 
-var canEnroll = isClassOpen && !isSchedConflict;
+function increment(x) {
 
-console.log(canEnroll);
+ return x +1;
 
-alert(canEnroll);
+
+}
