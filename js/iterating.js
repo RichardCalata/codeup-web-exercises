@@ -16,6 +16,31 @@ for(var i = 0; i < names.length; i++) {
 }
 
 
+names.forEach(function(names) {
+    console.log("this is a name " + names + '.');
+});
+
+var gums = ['one','two', 'three','four','five'];
+
+console.log(gums[3]);
+
+function first(gums){
+    return gums[0];
+}
+
+function second(gums){
+    return gums[1];
+}
+
+function last(gums){
+
+    return gums.length[gums.length-1];
+}
+
+
+first();
+second();
+last();
 
 
 (function(){
@@ -44,10 +69,10 @@ for(var i = 0; i < names.length; i++) {
     //  * array.
     //  */
 
-    /**
-     * TODO:
-     * Refactor your above code to use a `forEach` loop
-     */
+    // /**
+    //  * TODO:
+    //  * Refactor your above code to use a `forEach` loop
+    //  */
 
     /**
      * TODO:

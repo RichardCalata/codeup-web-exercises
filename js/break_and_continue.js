@@ -19,7 +19,7 @@ var number = prompt("an ODD number between 1 and 50");
 //     return number % 2 == 0;
 // }
 
-while((number%2==0)||(isNaN(parseFloat(number)))){
+while((number%2===0)||(isNaN(parseFloat(number)))){
 
 
     number = prompt("an ODD number between 1 and 50");
@@ -32,11 +32,11 @@ for(var i=1; i<51;i++){
 
 
 
-    if(i % 2 == 0) {
+    if(i % 2 === 0) {
 
         continue;
     }
-    if(i == number){
+    if(i === parseFloat(number)){
         console.log("ALERT!! SKIPPING "  + i)
         continue;
     }
