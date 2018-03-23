@@ -23,9 +23,11 @@ while((number%2==0)||(isNaN(parseFloat(number)))){
 
 
     number = prompt("an ODD number between 1 and 50");
+
 }
 
     console.log("We will be skipping " + number + ".");
+
 for(var i=1; i<51;i++){
 
 

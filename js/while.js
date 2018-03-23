@@ -21,8 +21,8 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 do {
 var customerBuys = Math.floor(Math.random() * 5) + 1;
     if(customerBuys>allCones){
-        document.write("I can't sell " + customerBuys + " cones. Only " + allCones + " left.")
-        break;
+        document.write("I can't sell " + customerBuys + " cones. I have only " + allCones + " left.<br>")
+        continue;
     }
     allCones = allCones - customerBuys;
 
@@ -30,7 +30,7 @@ var customerBuys = Math.floor(Math.random() * 5) + 1;
     console.log(allCones +' cones remain.');
 
 
-    if(allCones == 0){
+    if(allCones === 0){
         document.write("All sold out! <br>");
     }
 

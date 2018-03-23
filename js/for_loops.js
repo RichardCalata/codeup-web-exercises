@@ -16,7 +16,7 @@ function isEvenOdd(number) {
 
 for (var i =0; i<10; i++) {
 
-var number = Math.floor(Math.random() * 200) + 20;
+var number = Math.floor(Math.random() * 180) + 20;
     console.log(isEvenOdd(number));
     document.write(isEvenOdd(number) + " <br>")
 }
@@ -32,7 +32,7 @@ function showMultiplicationTable(number) {
 
 }
 
-for(var i=1; i<10; i++) {
+for(var i=1; i<11; i++) {
 
     showMultiplicationTable(number)
 
