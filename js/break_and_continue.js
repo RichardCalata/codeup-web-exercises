@@ -3,23 +3,19 @@
 
 
 
-
-for(var i = 0; i < 10; i++){
-    i = i.toString();
-    console.log(i.repeat(i));
-}
-
-
+//*******************************************************/
 //
 // function isEven(i){
 //
 //     return number % 2 == 0
 // }
-
+//*************didn't work had to add it in loop*********/
 
 var number = prompt("an ODD number between 1 and 50");
+    console.log("We will be skipping " + number + ".");
 
 for(var i=1; i<51;i++){
+
 
     if(isNaN(number)){
     document.write("That's not a number!");
@@ -36,8 +32,8 @@ for(var i=1; i<51;i++){
     }
 
 
-    console.log(i);
-    document.write(i);
+    console.log("Here is an ODD number: " + i);
+    document.write(i + "<br>");
 
 
 }
