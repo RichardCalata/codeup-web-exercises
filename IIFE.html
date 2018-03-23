@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Immediately Invoked Function Expression</title>
+    <style>
+        body {
+
+            font-family:"Helvetica", sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Immediately Invoked Function Expression</h1>
+<script>
+    "use strict";
+
+    // define a function and immediately invoke (i.e. call) it
+
+
+    (function first(bugs) {
+            var bugs = ['mosquito', 'wasp', 'dragonfly', 'noseeum'];
+            console.log(bugs[0]);
+            document.write(bugs[bugs.length-1]);
+
+
+    })();
+
+
+
+
+</script>
+</body>
+</html>
