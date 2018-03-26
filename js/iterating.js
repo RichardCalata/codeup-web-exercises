@@ -15,8 +15,8 @@ for(var i = 0; i < names.length; i++) {
     console.log(names[i]);
 }
 
-names.forEach(function(names) {
-    console.log("this is a name " + names + '.');
+names.forEach(function(todd) {
+    console.log("this is a name " + todd + '.');
 });
 
 /*****************************************************/
@@ -27,24 +27,26 @@ var birds = ['eagle', 'hawk', 'heron','shrike','pigeon'];
 
 var lakes = ['superior', 'huron','michigan','canyon lake','ontario','baikal'];
 
-first(bugs);
-second(birds);
-last(lakes);
+var bugs = ['mosquito', 'wasp', 'dragonfly', 'noseeum'];
+
 
 function first(input) {
-    var bugs = ['mosquito', 'wasp', 'dragonfly', 'noseeum'];
-console.log(input[0]);
+return(input[0]);
 }
 
+
 function second(input){
-console.log(input[1]);
+return(input[1]);
 }
 
 function last(input){
 
-console.log(input[input.length-1]);
+return(input[input.length-1]);
 }
 
+console.log(first(bugs));
+console.log(second(lakes));
+console.log(last(lakes));
 (function(){
 
     // /**
