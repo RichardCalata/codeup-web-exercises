@@ -17,8 +17,8 @@
      * Read each console log below, and write some javascript code to perform
      * the step that it describes
      */
-    planets.indexof('Earth');
-
+    console.log(planets);
+    planets.unshift("The Sun");
     console.log('Adding "The Sun" to the beginning of the planets array.');
     console.log(planets);
 
