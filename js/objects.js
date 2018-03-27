@@ -16,13 +16,13 @@ var person = {
     "firstName": "Rick",
     "lastName": "Sanchez",
         "sayHello": function(person){
-        console.log("Hello from " + person.firstName + ' ' + person.lastName);
+        console.log("Hello from " + this.firstName + ' ' + this.lastName);
         }
     };
 
     console.log(person.firstName);
     console.log(person.lastName) ;
-    console.log(person.sayHello(person));
+    console.log(person.sayHello());
 
     /**
      * TODO:
@@ -61,12 +61,12 @@ var person = {
 
     for(var i = 0; i < shoppers.length; i++) {
 
-        console.log(shoppers[i].name,shoppers[i].amount);
 
         if(shoppers[i].amount>=200){
 
             var discount = shoppers[i].amount*.12;
             var newPrice = shoppers[i].amount - discount;
+            console.log(shoppers[i].name,shoppers[i].amount);
             console.log(shoppers[i].name + " gets a %12 discount! ");
             console.log(shoppers[i].name + "'s discount is " + discount +"!");
             console.log(shoppers[i].name +"'s new total is  "+ newPrice +"!");
@@ -74,57 +74,37 @@ var person = {
         }
     }
 
+
+    shoppers.forEach(function(shopper){
+
+
+        if(shopper.amount>200){
+
+            var discount = shopper.amount*.12;
+            var newPrice = shopper.amount - discount;
+            console.log(shopper.name,shopper.amount);
+            console.log(shopper.name + " gets a %12 discount! ");
+            console.log(shopper.name + "'s discount is " + discount +"!");
+            console.log(shopper.name +"'s new total is  "+ newPrice +"!");
+        }
+
+    });
+
+
+
 var books = [
-    {
-        "title": "The Hitchiker's Guide to the Galaxy",
-        "author": {
-            "firstName": "Douglas",
-            "lastName": "Adams",
-        }
-    },
-
-    {
-        "title": "An Enquiry Concerning Human Understanding",
-        "author": {
-            "firstName": "David",
-            "lastName": "Hume",
-        }
-    },
-
-    {
-        "title": "Leviathan Wakes",
-        "author": {
-            "firstName": "James",
-            "lastName": "Corey",
-        }
-    },
-
-    {
-        "title": "Contact",
-        "author": {
-            "firstName": "Carl",
-            "lastName": "Sagan",
-        }
-    },
-
-    {
-        "title": "A Wizard of Earthsea",
-        "author": {
-            "firstName": "Ursula",
-            "lastName": "LeGuin",
-        },
-
-    }
-
+    createBook("The Hitchiker's Guide to the Galaxy", "Douglas Adams"),
+    createBook("An Enquiry Concerning Human Understanding", "David Hume"),
+    createBook("Leviathan Wakes","James Corey"),
+    createBook("Contact","Carl Sagan"),
+    createBook("The Dispossessed", "Ursula LeGuin")
 ];
 
 
     books.forEach(function(element,index){
-        console.log("Book "+index,element.title)
+        console.log("Book # "+ (index + 1),element.title);
         console.log("Author: "+ element.author.firstName + " " + element.author.lastName);
     });
-
-
 
     /**
      * Bonus:
@@ -136,6 +116,22 @@ var books = [
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+function createBook(title, author) {
+
+        var name = author.split(" ");
+        return {title: title, author: {
+            firstName: name[0],
+            lastName: name[1]
+            }
+        }
+   }
+
+    var area = Math.PI * 3;
+area = Math.round(area);
+
+console.log(area);
+
 // /** TODO:
 //  * Create an array of objects that represent books and store it in a
 //  * variable named `books`. Each object should have a title and an author
