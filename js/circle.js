@@ -4,7 +4,7 @@
     var circle = {
         radius: 3,
 
-        getArea: function (circle) {
+        getArea: function () {
 
             // hint: area = pi * radius^2
 
@@ -13,14 +13,12 @@
             return area;
         },
 
-        logInfo: function () {
+        logInfo: function (doRounding) {
 
-            var rounded =  Math.round(circle.getArea());
+            var result = this.getArea();
 
-            if(rounded === circle.getArea()){
-                console.log("message a");
-            } else {
-                console.log(circle.getArea());
+            if(doRounding){
+                result = Math.round(this.getArea());
             }
 
 
