@@ -34,7 +34,7 @@ var intervalId = setInterval(function() {
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
-detonationTimer = 1;
+clearInterval(intervalId);
 alert("You've saved us!");
     }
 
