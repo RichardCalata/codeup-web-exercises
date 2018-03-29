@@ -1,57 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>TESTING!!</title>
+    <title></title>
 </head>
 <body>
-<script src="js/testing.js"></script>
-<button id="btnToClick">Click Me</button>
-<h1>List One</h1>
-<ul>
-    <li class="odd list-one-item">List 1, Item 1</li>
-    <li class="even list-one-item">List 1, Item 2</li>
-</ul>
-<h1>List Two</h1>
-<ul>
-    <li class="odd list-two-item">List 2, Item 1</li>
-    <li class="even list-two-item">List 2, Item 2</li>
-</ul>
-
+<button id="btn1">Click Me!</button>
+<button id="btn2">Remove Event Listener</button>
 <script>
-    "use strict";
-    (function() {
-        // Get all elements with class 'even'
-        var evenElements = document.getElementsByClassName('even');
+    'use strict';
 
-        // Print the first element
-        console.log(evenElements[0]); // Prints li.even.list-one-item
+    var listener = function (event) {
+        alert('You clicked the button!');
+    }
 
-        // Print all elements
-        for (var i = 0; i < evenElements.length; i++) {
-            console.log(evenElements[i]);
-        }
+    // add event listener to btn1
+    var btn1 = document.getElementById('btn1');
+    btn1.addEventListener('click', listener, false);
 
-        // Prints:
-        // li.even.list-one-item
-        // li.even.list-two-item
+    var remover = function (event) {
+        // remove event listener from btn1
+        btn1.removeEventListener('click', listener, false);
+        console.log('Event listener removed.');
+    }
 
-        var listItems = document.getElementsByTagName('li');
+    // add event listener to btn2
+    var btn2 = document.getElementById('btn2');
+    btn2.addEventListener('click', remover, false);
 
-        // Print the first list item
-        console.log(listItems[0]); // Prints li.odd.list-one-item
-
-        // Print all the list items
-        for (var i = 0; i < listItems.length; i++) {
-            console.log(listItems[i]);
-        }
-
-        // Prints
-        // li.odd.list-one-item
-        // li.even.list-one-item
-        // li.odd.list-two-item
-        // li.even.list-two-item
-    })();
 </script>
 </body>
 </html>

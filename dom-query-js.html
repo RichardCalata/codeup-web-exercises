@@ -15,6 +15,10 @@
     <li data-dbid="5">Item 5</li>
 </ul>
 <h2 id="sub-header">Hello Again.</h2>
+<button id="btn1">"click me"</button>
+<button id="btn2">"click me"</button>
+<button id="btn3">"click me"</button>
+<button id="btn4">"click me"</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -28,9 +32,27 @@
 <script>
     (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = ;
 
+        // TODO: Uncomment next line and get the main header element by id
+       // var mainHeader = ;
+
+var listener = function(event){
+    alert("Button 1 was clicked")
+console.log("button 1 was clicked");
+};
+var button2 = function(event){
+    alert("Button 2 was clicked")
+console.log("button 2 was clicked");
+};
+
+
+
+var btn1 = document.getElementById("btn1");
+btn1.addEventListener('click', listener,false);
+
+
+var btn2 = document.getElementById("btn2");
+btn2.addEventListener('click',button2,false);
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
         // TODO: Uncomment the next line and get the sub header element by id
