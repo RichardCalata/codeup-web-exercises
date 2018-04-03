@@ -1,20 +1,36 @@
 "use strict";
 
+function GetSum( a,b )
+{
+    if(a<b){
+        for(var i=a; i<=b;i++){
+
+            var rollSum = a;
+            rollSum += i;
+
+        console.log(rollSum);
+        }
+        }
+        console.log(a);
+};
 
 
-// var a = Math.floor(Math.random()*100);
-// var b = Math.floor(Math.random()*100);
-// var c = Math.floor(Math.random()*100);
+
+
 // var d = Math.floor(Math.random()*100);
 // var e = Math.floor(Math.random()*100);
+
+
+
+
+
+
 /**************************************************/
 // var n = [a, b, c, d, e];
 //
-// n.forEach(function(number){
 //     number = Math.floor(Math.random()*100);
 // });
-//
-//     console.log("Smallest Integer is " + Math.min.apply(this,n));
+    hjkhjhjk//
 
 /***************************************************/
     // var minInt = n.reduce(function(a,b){
