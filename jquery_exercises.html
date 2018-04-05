@@ -8,27 +8,26 @@
     </head>
     <body>
     <div>
-        <h1 class="text-center">Hello World!</h1>
+        <h1 class="text-center header">Hello World!</h1>
     </div>
+    <div class="fixture">
+        <h2>A Second Header!</h2>
+        <p class='codeup'>Semiotics banh mi man bun next level vape +1 distillery food truck snackwave listicle
+            you probably haven't heard of them.</p>
+        <h2>A Third Header!</h2>
+        <p class='codeup'>Four loko wolf scenester mlkshk you probably haven't heard of them slow-carb. </p>
+        <h2>A Last Header!</h2>
+        <p class='codeup'>Vape ennui vice, selvage raclette yuccie DIY disrupt pok pok shoreditch. </p>
+    </div>
+
     <div>
-        <p>Semiotics banh mi man bun next level vape +1 distillery food truck snackwave listicle
-            you probably haven't heard of them
-            stumptown chartreuse. Meh tattooed kombucha flannel pinterest.
-            Chicharrones la croix keffiyeh vice. Succulents drinking vinegar distillery biodiesel
-            live-edge pickled asymmetrical tumblr godard vinyl tbh bicycle rights hell of.</p>
+        <ul>
 
-        <p>Four loko wolf scenester mlkshk you probably haven't heard of them slow-carb. Narwhal umami
-            forage hoodie chartreuse chambray, marfa microdosing brooklyn polaroid. Next level sriracha
-            ramps, cornhole humblebrag fashion axe hella pug seitan freegan etsy twee tumblr four loko viral.
-            Meditation etsy yuccie umami wayfarers tumblr microdosing, jean shorts DIY master cleanse pork belly
-            poke shoreditch squid.</p>
-
-        <p>Vape ennui vice, selvage raclette yuccie DIY disrupt pok pok shoreditch. Cornhole disrupt
-            quinoa woke cray, bushwick beard leggings kale chips jianbing butcher coloring book hashtag.
-            Kickstarter glossier selfies, coloring book hell of vexillologist mixtape.
-            Freegan pop-up echo park heirloom selfies. Trust fund aesthetic shaman, tilde helvetica mumblecore
-            seitan pickled direct trade umami bicycle rights salvia ugh pork belly. Vice before they sold out selvage,
-            mixtape marfa taiyaki roof party migas.</p>
+            <li>Liono</li>
+            <li>Tigra</li>
+            <li>Cheetarah</li>
+            <li>She-Ra</li>
+        </ul>
     </div>
 
 
@@ -38,11 +37,19 @@
 
             "use strict";
 
-            $(document).ready(function() {
+            $('li').css({'font-size':'25px',
+            'color':'green'});
+            $('.codeup').css({'color': 'red', 'border': '1px solid blue'});
+            $('.fixture').css('border', '2px solid red');
 
-               confirm("Are you Sure?");
+            $('li, .codeup, h1, p');
 
-            });
+
+                var contents = $('h1').html();
+                alert(contents);
+
+
+
 
 
         </script>
