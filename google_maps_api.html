@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps API</title>
+    <style>
+        #map-canvas {
+            width: 1280px;
+            height: 800px;
+        }
+        div {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="map-canvas"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb_oBUo2kwk3EfmVjG8AYu4c-hC_xrXG0"></script>
+
+<script>
+    var mapOptions ={
+        zoom: 18,
+        center : {
+            lat: 29.426791,
+            lng: -98.489602
+        }
+    };
+    var address ={
+        address: "6733 Bandera Rd, Leon Valley, TX 78238"
+    };
+
+    var codeup = {
+        lat: 29.426791,
+        lng: -98.489602
+    };
+
+    function callback(results, status){
+        if (status === google.maps.GeocoderStatus.OK) {
+
+            // Recenter the map over the address
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                position: results[0].geometry.location,
+                map: map
+            });
+
+            var info = new google.maps.InfoWindow({
+
+                content: "this is <strong>Kung Fu Noodle!</strong><br>"
+            });
+            info.open(map,marker);
+
+
+        } else {
+
+            // Show an error message with the status if our request fails
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+    }
+
+    var mapCanvas = document.getElementById('map-canvas');
+
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode(address, callback);
+</script>
+</body>
+</html>

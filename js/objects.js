@@ -124,9 +124,11 @@ function createBook(title, author) {
             firstName: name[0],
             lastName: name[1]
             }
-        }
+        }; books.push[title];
    }
 
+   createBook("magpie", "Shel");
+console.log(createBook("magpie", "Shel"));
     var area = Math.PI * 3;
 area = Math.round(area);
 
