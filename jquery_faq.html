@@ -17,7 +17,7 @@
 
         .highlight {
 
-            text-decoration: #00aba9;
+            background: yellow;
         }
     </style>
 </head>
@@ -25,7 +25,7 @@
 
 <div>
 
-    <h1 class ="highlight">JQuery FAQ</h1>
+    <h1>JQuery FAQ</h1>
 </div>
 
 <div>
@@ -73,7 +73,7 @@
 
     function showFAQ(){
 
-$('dd').toggleClass('invisible');
+$(this).next().toggleClass('invisible');
 
     }
 
@@ -81,7 +81,7 @@ $('dd').toggleClass('invisible');
 $('dt').on('click', showFAQ);
 
 
-    $('h1').on('click',function(){
+    $('dt').on('click',function(){
         $(this).toggleClass('highlight');
     });
 </script>
