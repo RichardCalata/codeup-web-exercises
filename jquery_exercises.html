@@ -12,12 +12,17 @@
     </div>
     <div class="fixture">
         <h2>A Second Header!</h2>
-        <p class='codeup'>Semiotics banh mi man bun next level vape +1 distillery food truck snackwave listicle
-            you probably haven't heard of them.</p>
+        <p class='codeup'>The power of the Dark Side.
+            Expecting a burp and vomiting on the floor. My first period. Samuel L. Jackson.
+            The Chinese gymnastics team.</p>
         <h2>A Third Header!</h2>
-        <p class='codeup'>Four loko wolf scenester mlkshk you probably haven't heard of them slow-carb. </p>
+        <p class='codeup'>Free samples. The Dial-A-Slice Apple Divider from Williams-Sonoma.
+            Hot people. Not knowing what to believe anymore about butter.
+            Golden showers. Wearing Nicolas Cage's face.</p>
         <h2>A Last Header!</h2>
-        <p class='codeup'>Vape ennui vice, selvage raclette yuccie DIY disrupt pok pok shoreditch. </p>
+        <p class='codeup'>A heart that is two sizes too small and that therefore
+            cannot pump an adequate amount of blood.
+            Saxophone solos. Hope. Multiple stab wounds. Socks.</p>
     </div>
 
     <div>
@@ -45,12 +50,46 @@
             $('li, .codeup, h1, p');
 
 
-                var contents = $('h1').html();
-                alert(contents);
+            var colors = ['pink', 'green', 'goldenrod', 'papayawhip'];
+            var i = 0;
+$('h1').on('click',colorChange);
+
+function colorChange(){
+
+    $(this).css('color', colors[i%colors.length]);
+    i++;
+}
+
+            $('li').hover(function(){
+                $(this).css({
+                    'background-color' : colors[i % colors.length],
+                    'cursor': 'help'});
+i++;
+            },
 
 
+            function(){
+                $(this).css({
+                    'background-color': 'transparent',
+                    'cursor': 'default',});
+            });
 
+$('p').on('dblclick', fontO);
+var q= 0;
+var fontOs = ['18px', '25px', '10px']
+function fontO(){
+    $(this).css('font-size', fontOs[q % fontOs.length]);
+    q++;
+}
 
+$('li').hover(function(){
+
+    $('li').css('color','red');
+},
+
+function(){
+    $('li').css('color','black');
+});
 
         </script>
 
