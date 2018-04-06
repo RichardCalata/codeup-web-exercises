@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scratch</title>
+</head>
+<body>
+<script src="js/jquery2.2.4.js"></script>
+<script>
+
+    var kkeys = [], konami = “38,38,40,40,37,39,37,39,66,65”;
+
+    $(document).keydown(function(e) {
+
+        kkeys.push( e.keyCode );
+
+        if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+
+            $(document).ready(‘keydown’,arguments.callee);
+
+            // do something awesome
+            $(“body”).addClass(“konami”);
+
+            // $(‘#door-one’).animate({right: ‘1000px’},1500,‘swing’);
+
+            // $(‘#door-two’).animate({left: ‘1000px’},1500,‘swing’);
+            // $(‘p.hidden’).fadeIn(10000).removeClass(‘.hidden’);
+
+        }
+
+    });
+
+</script>
+</body>
+</html>
