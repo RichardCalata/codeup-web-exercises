@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <title>JQuery FAQ</title>
+
+    <style>
+
+        .red {
+
+            color: red;
+        }
+
+
+        .highlight {
+
+            text-decoration: #00aba9;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+
+    <h1 class ="highlight">JQuery FAQ</h1>
+</div>
+
+<div>
+    <h2>10 FAQs about National Parks</h2>
+
+    <dl>
+        <dt>something</dt>
+        <dd class="invisible">Lorem ipsum dolor sit amet.</dd>
+
+        <dt>something</dt>
+        <dd class="invisible">Lorem ipsum dolor.</dd>
+
+        <dt>something</dt>
+        <dd class="invisible">Lorem ipsum dolor sit.</dd>
+
+        <dt>something</dt>
+        <dd class="invisible">Lorem ipsum dolor sit amet, consectetur.</dd>
+
+        <dt>something</dt>
+        <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
+
+        <dt>something</dt>
+        <dd class="invisible">Lorem ipsum dolor.</dd>
+
+        <dt>something</dt>
+        <dd class="invisible">Lorem ipsum dolor sit.</dd>
+
+        <dt>something</dt>
+        <dd class="invisible">Lorem ipsum dolor sit amet, consectetur.</dd>
+
+        <dt>something</dt>
+        <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
+    </dl>
+</div>
+<script src="js/jquery2.2.4.js"></script>
+<script>
+
+    // $(document).ready(function() {
+    //     $('dd').click(function(event) {
+    //         event.showFAQ();
+    //         $('dd').toggleClass('invisible');
+    //     });
+    // });
+
+
+    function showFAQ(){
+
+$('dd').toggleClass('invisible');
+
+    }
+
+
+$('dt').on('click', showFAQ);
+
+
+    $('h1').on('click',function(){
+        $(this).toggleClass('highlight');
+    });
+</script>
+</body>
+</html>
