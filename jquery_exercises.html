@@ -76,19 +76,21 @@ i++;
 
 $('p').on('dblclick', fontO);
 var q= 0;
+console.log(q);
 var fontOs = ['18px', '25px', '10px']
 function fontO(){
     $(this).css('font-size', fontOs[q % fontOs.length]);
     q++;
+    console.log(q+" again")
 }
 
 $('li').hover(function(){
 
-    $('li').css('color','red');
+    $(this).css('color','red');
 },
 
 function(){
-    $('li').css('color','black');
+    $(this).css('color','black');
 });
 
         </script>
