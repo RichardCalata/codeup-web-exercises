@@ -15,29 +15,30 @@
     //38,38,40,40,37,39,37,39,66,65
     "use strict";
 
+
+    var count = 0;
+
+
     $(document).keyup(function(event){
 
-        var count = 0;
-        console.log(count);
-        console.log(event.keyCode);
-        count++;
-        console.log(count + " again");
+        var konamiKeys = [38,38,40,40,37,39,37,39,66,65];
+        var key = event.keyCode;
+
+        if(key == konamiKeys[count]){
+            console.log("this message");
+            count++;
+
+
+
+            console.log(event.keyCode + " is the keyCode");
+
+            console.log(count + " is the count");
+        } if(count == 10){
+            alert("the 30 lives alert");
+        }
 
     });
 
-    var key = (event.keyCode);
-    var konamiKeys = [38,38,40,40,37,39,37,39,66,65];
-
-
-    $('p').on('dblclick', fontO);
-    var q= 0;
-    console.log(q);
-    var fontOs = ['18px', '25px', '10px']
-    function fontO(){
-        $(this).css('font-size', fontOs[q % fontOs.length]);
-        q++;
-        console.log(q+" again")
-    }
 </script>
 </body>
 </html>
