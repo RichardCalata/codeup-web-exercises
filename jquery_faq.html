@@ -17,6 +17,10 @@
             color: red;
         }
 
+        #registration {
+            background-color: greenyellow;
+        }
+
 
         .highlight {
 
@@ -35,19 +39,37 @@
 
         button.swapper {
             margin: 0;
-            text-align-center;
+            text-align: center;
         }
+
+        .bold {
+
+            font-weight: bold;
+        }
+
+        .greenYellow {
+            background-color: greenyellow;
+        }
+
+
     </style>
 </head>
 <body>
-
+<div id="newsLetter">
+    <h1 >Would you like to sign up for our newsletter?</h1>
+    <span id="closerX">x</span>
+</div>
 <div>
 
     <h1>JQuery FAQ</h1>
 </div>
 
 <div>
-    <h2>10 FAQs about National Parks</h2>
+    <h2 id="registration">Please Register for our site</h2>
+</div>
+
+<div>
+    <h3>10 FAQs about National Parks</h3>
 
     <dl>
         <dt>something</dt>
@@ -147,7 +169,10 @@
     //     });
     // });
 
-
+$(document).ready(function(){
+    $('ul').hide();
+    $('#registration').hide()
+})
     function showFAQ(){
 
 $(this).next().toggleClass('invisible');
@@ -163,22 +188,35 @@ $('dt').on('click', showFAQ);
     });
 
     $('button').on('click', function(){
-        $(this).next().children().last().css({'font-weight': 'bold',
-            'background-color': 'yellow'
-        });
+        $(this).next().children().last().toggleClass('highlight').toggleClass('bold');
 
     })
 
 
     $('li').on('click',function(){
 
-        $(this).parent().prev().prev().css('background-color', 'blue');
+        $(this).parent().prev().prev().toggleClass('greenYellow');
     })
 
     $('#b1').on('click',function(){
 
-        $('#leftImage').val('#centerImage');
+        $('#leftImage').next();
     })
+
+    $('h3').on('click', function(){
+
+        $(this).next().next().slideToggle()
+    })
+
+    $('#closerX').on('click',function(){
+
+        $('#newsLetter').fadeOut(800,'swing')
+    })
+
+    setInterval(function () {
+
+        $('#registration').fadeIn(800,'swing')
+    }, 8000);
 </script>
 </body>
 </html>
