@@ -8,6 +8,9 @@
     <title>JQuery FAQ</title>
 
     <style>
+        body {
+            margin: 20px;
+        }
 
         .invisible{
 
@@ -18,6 +21,21 @@
         .highlight {
 
             background: yellow;
+        }
+        .col-md-4 {
+            margin: 0px;
+        }
+
+        img {
+            margin: 0px;
+            border: #00aba9 2em;
+            border-style: solid;
+
+        }
+
+        button.swapper {
+            margin: 0;
+            text-align-center;
         }
     </style>
 </head>
@@ -66,13 +84,13 @@
 
     <button class="firstButton" type="buttton">BUTTON</button>
     <ul id="national-parks">
-        <li class="national">Arches</li>
-        <li class="national">Badlands</li>
-        <li class="national">Carlsbad Caverns</li>
-        <li class="national">Denali</li>
-        <li class="national">Everglades</li>
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
     </ul>
-    <h3>State Parks of Texas</h3>
+    <h3>Texas State Parks of Texas</h3>
     <button class="secondButton" type="button">BUTTON</button>
     <ul id="state-parks-texas">
         <li>Abilene</li>
@@ -81,8 +99,44 @@
         <li>Davis Mountains</li>
         <li>Enchanted Rock</li>
     </ul>
+    <h3>San Antonio Parks of San Antonio</h3>
+    <button class="thirdButton" type="button">BUTTON</button>
+
+    <ul>
+        <li>Acequia</li>
+        <li>Brackenridge</li>
+        <li>Comanche Lookout</li>
+        <li>Dignowity</li>
+        <li>Eisenhower</li>
+    </ul>
+
+
 
 </div>
+<hr>
+<div class="gallery container">
+    <div class="row">
+    <div class="col-md-4">
+        <img id="leftImage" src="img/link.jpg" alt="left image">
+        <button id="b1" class="swapper" type="buttton">SWAP!</button>
+    </div>
+
+    <div class="col-md-4">
+        <img id="centerImage" src="img/img2.jpg" alt="center image">
+        <button id="b2" class="swapper" type="buttton">SWAP!</button>
+
+    </div>
+
+    <div class="col-md-4">
+        <img id="rightImage" src="img/luigi.jpg" alt="right image">
+        <button id="b3" class="swapper" type="buttton">SWAP!</button>
+
+    </div>
+    </div>
+</div>
+<div><br><br></div>
+<div><br><br></div>
+
 <script src="js/jquery2.2.4.js"></script>
 <script>
 
@@ -108,8 +162,8 @@ $('dt').on('click', showFAQ);
         $(this).toggleClass('highlight');
     });
 
-    $('.firstButton').on('click', function(){
-        $('.national').last().css({'font-weight': 'bold',
+    $('button').on('click', function(){
+        $(this).next().children().last().css({'font-weight': 'bold',
             'background-color': 'yellow'
         });
 
@@ -118,7 +172,12 @@ $('dt').on('click', showFAQ);
 
     $('li').on('click',function(){
 
-        $(this).parent('h3').css('background-color', 'blue');
+        $(this).parent().prev().prev().css('background-color', 'blue');
+    })
+
+    $('#b1').on('click',function(){
+
+        $('#leftImage').val('#centerImage');
     })
 </script>
 </body>
