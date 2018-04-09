@@ -60,6 +60,29 @@
         <dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
     </dl>
 </div>
+
+<div>
+    <h3 id="national-parks-heading">National Parks</h3>
+
+    <button class="firstButton" type="buttton">BUTTON</button>
+    <ul id="national-parks">
+        <li class="national">Arches</li>
+        <li class="national">Badlands</li>
+        <li class="national">Carlsbad Caverns</li>
+        <li class="national">Denali</li>
+        <li class="national">Everglades</li>
+    </ul>
+    <h3>State Parks of Texas</h3>
+    <button class="secondButton" type="button">BUTTON</button>
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+
+</div>
 <script src="js/jquery2.2.4.js"></script>
 <script>
 
@@ -84,6 +107,19 @@ $('dt').on('click', showFAQ);
     $('dt').on('click',function(){
         $(this).toggleClass('highlight');
     });
+
+    $('.firstButton').on('click', function(){
+        $('.national').last().css({'font-weight': 'bold',
+            'background-color': 'yellow'
+        });
+
+    })
+
+
+    $('li').on('click',function(){
+
+        $(this).parent('h3').css('background-color', 'blue');
+    })
 </script>
 </body>
 </html>
