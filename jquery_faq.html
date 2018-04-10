@@ -19,6 +19,7 @@
 
         #registration {
             background-color: greenyellow;
+            text-align: center;
         }
 
 
@@ -55,22 +56,22 @@
     </style>
 </head>
 <body>
-<div id="newsLetter">
+<div>
     <h1 >Would you like to sign up for our newsletter?</h1>
-    <span id="closerX">x</span>
+    <span id="closerX"><h1>X</h1></span>
+</div>
+<div>
+    <h2 id="registration">Please register for our site.</h2>
 </div>
 <div>
 
     <h1>JQuery FAQ</h1>
 </div>
 
-<div>
-    <h2 id="registration">Please Register for our site</h2>
-</div>
 
 <div>
     <h3>10 FAQs about National Parks</h3>
-
+    <hr>
     <dl>
         <dt>something</dt>
         <dd class="invisible">Lorem ipsum dolor sit amet.</dd>
@@ -105,6 +106,7 @@
     <h3 id="national-parks-heading">National Parks</h3>
 
     <button class="firstButton" type="buttton">BUTTON</button>
+
     <ul id="national-parks">
         <li>Arches</li>
         <li>Badlands</li>
@@ -112,8 +114,10 @@
         <li>Denali</li>
         <li>Everglades</li>
     </ul>
+    <p></p>
     <h3>Texas State Parks of Texas</h3>
     <button class="secondButton" type="button">BUTTON</button>
+
     <ul id="state-parks-texas">
         <li>Abilene</li>
         <li>Big Bend</li>
@@ -121,6 +125,7 @@
         <li>Davis Mountains</li>
         <li>Enchanted Rock</li>
     </ul>
+    <p></p>
     <h3>San Antonio Parks of San Antonio</h3>
     <button class="thirdButton" type="button">BUTTON</button>
 
@@ -171,7 +176,8 @@
 
 $(document).ready(function(){
     $('ul').hide();
-    $('#registration').hide()
+    $('#registration').hide();
+    $('dl').hide();
 })
     function showFAQ(){
 
@@ -210,12 +216,12 @@ $('dt').on('click', showFAQ);
 
     $('#closerX').on('click',function(){
 
-        $('#newsLetter').fadeOut(800,'swing')
+        $(this).parent().fadeOut(600,'swing')
     })
 
-    setInterval(function () {
+    setTimeout(function () {
 
-        $('#registration').fadeIn(800,'swing')
+        $('#registration').fadeIn(1000,'swing')
     }, 8000);
 </script>
 </body>
