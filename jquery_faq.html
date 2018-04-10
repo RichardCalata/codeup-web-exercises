@@ -206,8 +206,16 @@ $('dt').on('click', showFAQ);
 
     $('#b1').on('click',function(){
 
-        $('#leftImage').next();
+        $('#leftImage').replaceWith("#centerImage");
     })
+
+    var imgUrl;
+
+    var imgSwap = [];
+    $(".gallery img").each(function(){
+        imgUrl = this.src.replace("img/img2.jpg");
+        imgSwap.push(imgUrl);
+    });
 
     $('h3').on('click', function(){
 
