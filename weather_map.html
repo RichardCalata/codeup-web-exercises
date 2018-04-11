@@ -139,24 +139,31 @@ crossorigin="anonymous"></script>
     //         + response.list[1].clouds + "</li> <li>"
     //         + response.list[1].humidity + "</li> <li>"
     //         + response.list[1].pressure + "</li> </ul>");
-    // }
+    // }.temp.min
+// var dayZ = ["dayOne", "dayTwo", "dayThree"];
+//         dayZ.forEach(function(day){
+//            foreCastTheWeather(day);
+//         });
 
     request.done(function(response){
+        console.log(response);
+        response.list.forEach(function(item) {
 
-        response.forEach(function(item) {
+            $(".days").append("<ul> <li><strong>Low </strong>"
+                + item.temp.min + " <strong>High</strong> " + item.temp.max + "</li> <li><strong>Clouds</strong>"
+                + item.clouds + "</li> <li><strong>Humidity</strong>"
+                + item.humidity + "</li> <li><strong>Pressure</strong>"
+                + item.pressure + "</li> </ul>");
 
-            $(".days").append("<ul> <li>Low "
-                + item.list.temp.min + " High " + item.list.temp.max + "</li> <li>"
-                + item.list.clouds + "</li> <li>"
-                + item.list.humidity + "</li> <li>"
-                + item.list.pressure + "</li> </ul>");
+            console.log(item.list.temp.max);
+            console.log("a message");
+            console.log("a message");
 
-            console.log(response.list["0"].temp.max);
-            console.log(response.list["0"].temp.max);
-            console.log(response.list["0"].temp.min);
-            console.log(response.list["0"].humidity);
         })
     });
+
+
+
     // request.done(function(response){
     // $(".dayTwo").append("<ul> <li>"
     //    + response.list[1].temp.min + response.list[1].temp.max +"</li> <li>"
