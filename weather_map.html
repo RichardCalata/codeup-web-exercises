@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <title>Weather Map</title>
+    <style>
+        body {
+            margin: 30px;
+            background-color: #818181;
+
+        }
+        #map-canvas {
+            width: 90%;
+            height: 800px;
+        }
+        div {
+            margin: auto;
+        }
+        .foreCastBanner{
+            text-align: center;
+            margin: auto;
+            padding:auto;
+        }
+
+        .days {
+            text-align: center;
+            background-color: #00aba9;
+            height: 200px;
+            width: 30%;
+            display: inline-block;
+            margin: auto;
+            padding:auto;
+        }
+
+        .weatherForecast {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="weatherForecast row">
+        <h1 class="foreCastBanner">Three Day Forecast</h1>
+        <h2>San Antonio</h2>
+
+        <div class="dayOne days">
+
+        </div>
+        <div class="dayTwo days">
+
+        </div>
+        <div class="dayThree days">
+
+        </div>
+    </div>
+</div>
+<br>
+<div>
+    <input id="lattitude" type="text" placeholder="lattitude">
+    <input id="longitude" type="text" placeholder="longitude">
+</div>
+<br>
+<div>
+<div id="map-canvas"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb_oBUo2kwk3EfmVjG8AYu4c-hC_xrXG0"></script>
+<script>
+    var mapOptions ={
+        zoom: 18,
+        center : {
+            lat: 29.426791,
+            lng: -98.489602
+        }
+    };
+    var address ={
+        address: "6733 Bandera Rd, Leon Valley, TX 78238"
+    };
+
+    var codeup = {
+        lat: 29.426791,
+        lng: -98.489602
+    };
+
+    function callback(results, status){
+        if (status === google.maps.GeocoderStatus.OK) {
+
+            // Recenter the map over the address
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                position: results[0].geometry.location,
+                map: map
+            });
+
+            var info = new google.maps.InfoWindow({
+
+                content: "this is <strong>Kung Fu Noodle!</strong><br>"
+            });
+            info.open(map,marker);
+
+
+        } else {
+
+            // Show an error message with the status if our request fails
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+    }
+
+    var mapCanvas = document.getElementById('map-canvas');
+
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode(address, callback);
+</script>
+
+<script>
+    var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+        APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+        lat:    29.423017,
+        lon:   -98.48527,
+        units: "imperial"
+    }).done(function(data) {
+        console.log(data);
+    });
+
+    // function foreCast(response){
+    //     $(".dayTwo").append("<ul> <li>"
+    //         + response.list[1].temp.min + response.list[1].temp.max +"</li> <li>"
+    //         + response.list[1].clouds + "</li> <li>"
+    //         + response.list[1].humidity + "</li> <li>"
+    //         + response.list[1].pressure + "</li> </ul>");
+    // }
+
+    request.done(function(response){
+
+        response.forEach(function(item) {
+
+            $(".days").append("<ul> <li>Low "
+                + item.list.temp.min + " High " + item.list.temp.max + "</li> <li>"
+                + item.list.clouds + "</li> <li>"
+                + item.list.humidity + "</li> <li>"
+                + item.list.pressure + "</li> </ul>");
+
+            console.log(response.list["0"].temp.max);
+            console.log(response.list["0"].temp.max);
+            console.log(response.list["0"].temp.min);
+            console.log(response.list["0"].humidity);
+        })
+    });
+    // request.done(function(response){
+    // $(".dayTwo").append("<ul> <li>"
+    //    + response.list[1].temp.min + response.list[1].temp.max +"</li> <li>"
+    //    + response.list[1].clouds + "</li> <li>"
+    //    + response.list[1].humidity + "</li> <li>"
+    //    + response.list[1].pressure + "</li> </ul>");
+    //
+    // })
+    // request.done(function(response){
+    // $(".dayThree").append("<ul> <li>"
+    //    + response.list[2].temp.min + response.list[2].temp.max +"</li> <li>"
+    //    + response.list[2].clouds + "</li> <li>"
+    //    + response.list[2].humidity + "</li> <li>"
+    //    + response.list[2].pressure + "</li> </ul>");
+    //
+    // })
+
+</script>
+</body>
+</html>
+

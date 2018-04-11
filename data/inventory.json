@@ -30,5 +30,10 @@
             "tool"
         ],
         "price": 10
-    }
+    }, {
+    "title": "Canooter",
+    "quantity": 23,
+    "categories": [ "VM","tool"],
+    "price": "1200"
+}
 ]

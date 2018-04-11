@@ -2,22 +2,46 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <style>
+        .header {
+
+            font-weight: bold;
+        }
+
+        thead {
+
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .main {
+            margin: 20px;
+        }
+
+
+
+    </style>
 </head>
 <body>
-
-<h1>My Tool Store</h1>
+<div class="main">
+<h1 class="header">My Tool Store</h1>
 
 <table id="products">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
+            <th >Title</th>
+            <th >Quantity</th>
+            <th >Price</th>
+            <th >Categories</th>
         </tr>
     </thead>
-    <tbody id="insertProducts"></tbody>
+    <tbody id="insertProducts" class=""></tbody>
 </table>
+<p></p>
+<button type="button" class="btn btn-warning btn-block">Refresh</button>
+
+</div>
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -30,6 +54,12 @@
     "use strict";
 
     var request = $.get("data/inventory.json");
+
+
+    request.fail(function(request,status,error){
+        console.log(status);
+        console.log(error);
+    });
 
     request.done(function(response){
         console.log(response);
