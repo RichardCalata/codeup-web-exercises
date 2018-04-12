@@ -6,9 +6,89 @@
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
           crossorigin="anonymous">
     <title>Simple Simon</title>
+    <style>
+        body    {
+            margin: 20px;
+        }
+        .aHeader    {
+            text-align: center;
+            margin-bottom: 50px;
+
+        }
+
+        .gamebody {
+            background-color: #3d2e80 ;
+            height: 600px;
+            width: 600px;
+            margin: auto;
+            text-align:center;
+            /*border-radius: 50%;*/
+            overflow: hidden;
+
+        }
+
+        .quarter    {
+            height: 276px;
+            width: 276px;
+
+            display: inline-block;
+            margin: 10px
+
+        }
+
+        .red    {
+            background-color: red;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+
+        .blue   {
+            background-color: blue;
+        }
+
+        .green  {background-color: green;
+        }
+
+        .btn-warning    {
+            border-radius: 12px
+
+        }
+
+        .dim    {
+           background-color : #d2cbc2;
+        }
+
+
+
+    </style>
 </head>
 <body>
-    <div>
+
+    <div class="aHeader">
+<h1>Simple Simon: The Game</h1>
+    </div>
+    <div class="main">
+        <div class="gamebody">
+            <div class="top">
+                <div class="quarter red"></div>
+                <div class="quarter yellow"></div>
+            </div>
+            <div class="bottom">
+                <div class="quarter blue"></div>
+                <div class="quarter green"></div>
+            </div>
+
+            <br>
+
+        </div>
+        <br>
+<div class="buttons">
+    <button id="startButton" type="button" class="btn-warning btn-block button 4"><h1>Start</h1></button>
+
+</div>
+
+
 
     </div>
 
@@ -20,6 +100,60 @@
 
     </script>
     <script>
+        "use strict";
+        var pattern = [];
+
+
+        $('.red').on('mousedown', function(){
+            console.log("red was clicked");
+            $(this).addClass('dim');
+
+            });
+
+        $('.red').on('mouseup', function(){
+            console.log("red was UNclicked");
+            $(this).removeClass('dim');
+
+        });
+
+        $('.yellow').on('mousedown', function() {
+            console.log("yellow was clicked");
+            $(this).addClass('dim');
+        });
+
+        $('.yellow').on('mouseup', function(){
+            console.log("yellow was UNclicked");
+            $(this).removeClass('dim');
+        });
+
+        $('.blue').on('mousedown', function(){
+            console.log("blue was clicked");
+            $(this).addClass('dim');
+        });
+
+        $('.blue').on('mouseup', function(){
+            $(this).removeClass('dim');
+        })
+
+        $('.green').on('mousedown', function(){
+            console.log("green was clicked");
+            $(this).addClass('dim');
+
+        });
+
+        $('.green').on('mouseup', function(){
+            $(this).removeClass('dim');
+            });
+
+        $('#startButton').on('click', function(){
+            console.log('Start Button was clicked')
+            setTimeout(function(){
+                console.log("timeout message");
+                $('.red').addClass('dim');
+            }, 3000);
+        });
+
+
 
 
 
