@@ -43,6 +43,22 @@
             list-style: none;
             text-align: center;
         }
+
+        .row {
+            text-align: center;
+        }
+
+        input {
+            display: inline-block;
+            margin: 0;
+            padding:0;
+            width: 40%;
+
+        }
+
+        button {
+            color: #414141
+        }
     </style>
 </head>
 <body>
@@ -63,31 +79,46 @@
     </div>
 </div>
 <br>
+<div class="row">
+    <input class="col-6" id="lattitude" type="text" placeholder="lattitude">
+    <input class="col-6" id="longitude" type="text" placeholder="longitude">
+</div>
+<br>
 <div>
-    <input id="lattitude" type="text" placeholder="lattitude">
-    <input id="longitude" type="text" placeholder="longitude">
+    <br>
+    <button type="button" class="btn-warning btn-block">Recenter Map</button>
+    <br>
 </div>
 <br>
 <div>
 <div id="map-canvas"></div>
 </div>
+
+<!---->
+
 <script src="https://code.jquery.com/jquery-3.3.1.js"
 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 crossorigin="anonymous"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb_oBUo2kwk3EfmVjG8AYu4c-hC_xrXG0"></script>
 <script>
+    $('.btn-warning').on('click',(function(){
+        console.log("button was clicked");
+
+        $('#map-canvas').
+    }));
+
+    //google map API requests
+
     var mapOptions ={
         zoom: 18,
         center : {
-            lat: 29.426791,
-            lng: -98.489602
+            lat: 41.40338,
+            lng: 2.17403
         }
     };
-    var address ={
-        address: "6733 Bandera Rd, Leon Valley, TX 78238"
-    };
 
-    var codeup = {
+
+    var newPosition = {
         lat: 29.426791,
         lng: -98.489602
     };
@@ -104,7 +135,7 @@ crossorigin="anonymous"></script>
 
             var info = new google.maps.InfoWindow({
 
-                content: "this is <strong>Kung Fu Noodle!</strong><br>"
+                content: "<strong>My Marker</strong><br>"
             });
             info.open(map,marker);
 
@@ -121,17 +152,24 @@ crossorigin="anonymous"></script>
     var map = new google.maps.Map(mapCanvas, mapOptions);
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode(address, callback);
+
+
 </script>
 
 <script>
+
+    // weather request
     var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
         APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
-        lat:    29.423017,
-        lon:   -98.48527,
-        units: "imperial"
+        lat:    41.40338,
+        lon:   2.174037,
+        units: "imperial",
+        cnt: 1 //remember to correct the number of days!!
     }).done(function(data) {
         console.log(data);
     });
+
+
 
     // function foreCast(response){
     //     $(".dayTwo").append("<ul> <li>"
@@ -149,18 +187,46 @@ crossorigin="anonymous"></script>
         console.log(response);
         response.list.forEach(function(item) {
 
-            $(".days").append("<ul> <li><strong>Low </strong>"
-                + item.temp.min + " <strong>High</strong> " + item.temp.max + "</li> <li><strong>Clouds</strong>"
-                + item.clouds + "</li> <li><strong>Humidity</strong>"
-                + item.humidity + "</li> <li><strong>Pressure</strong>"
-                + item.pressure + "</li> </ul>");
+            $(".days").append("<ul><li><strong>Low </strong>"
+                + item.temp.min + " <strong>High</strong> " + item.temp.max + "</li><li><strong>Clouds</strong>"
+                + item.clouds + "</li><li><strong>Humidity</strong>"
+                + item.humidity + "</li><li><strong>Pressure</strong>"
+                + item.pressure + "</li></ul>");
 
-            console.log(item.list.temp.max);
-            console.log("a message");
-            console.log("a message");
+            console.log("a message end of script");
 
         })
     });
+
+    // function initMap() {
+    //     var myLatLng = {lat: 29.423017, lng: -98.48527};
+    //
+    //     var map = new google.maps.Map(document.getElementById('map'), {
+    //         zoom: 4,
+    //         center: myLatLng
+    //     });
+    //
+    //     var marker = new google.maps.Marker({
+    //         position: myLatLng,
+    //         map: map,
+    //         title: 'Hello World!'
+    //     });
+    // }
+
+//     target.addEventListener(type, 'click');
+//
+// var listener = onmousedown(initMap){
+//     marker.setMap(map);
+//
+// }
+    // function foreCastWeather(item){
+    //     response.forEach(function(item){
+    //     console.log(item)
+    //     $('.days').append("<ul><li><strong>Low </strong>" + item.temp.min + " <strong>High</strong> " + item.temp.max + "</li><li><strong>Clouds</strong>"
+    //         + item.list.clouds + "</li><li><strong>Humidity</strong>"
+    //         + item.humidity + "</li><li><strong>Pressure</strong>"
+    //         + item.pressure + "</li></ul>");
+    // });
 
 
 
