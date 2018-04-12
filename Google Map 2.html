@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Google Map 2.0</title>
+        <style>
+            #map-canvas {
+                width: 1280px;
+                height: 800px;
+            }
+            div {
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map-canvas"></div>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb_oBUo2kwk3EfmVjG8AYu4c-hC_xrXG0"></script>
+
+        <script type="text/javascript">
+            "use strict";
+            var inputLat;
+            var inputLn;
+
+            (function(){
+            var mapOptions = {
+                zoom: 19,
+                center: {
+                    lat: 29.426791,
+                    lng: -98.489602
+                }
+            };
+
+            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+            })();
+
+
+
+        </script>
+
+
+
+    </body>
+</html>
