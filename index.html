@@ -28,26 +28,31 @@
         }
 
         .quarter    {
-            height: 276px;
-            width: 276px;
+            height: 270px;
+            width: 270px;
 
             display: inline-block;
-            margin: 10px
-
+            margin: 10px;
         }
 
         .red    {
             background-color: red;
+            opacity: .6;
         }
+
+
         .yellow {
             background-color: yellow;
+            opacity: .6;
         }
 
         .blue   {
             background-color: blue;
+            opacity: .6;
         }
 
         .green  {background-color: green;
+            opacity: .6;
         }
 
         .btn-warning    {
@@ -55,8 +60,10 @@
 
         }
 
-        .dim    {
-           background-color : #d2cbc2;
+        .lit   {
+           opacity: 1;
+            height: 275px;
+            width: 275px;
         }
 
 
@@ -66,7 +73,12 @@
 <body>
 
     <div class="aHeader">
-<h1>Simple Simon: The Game</h1>
+        <h1>Simple Simon</h1>
+        <br>
+        <div>
+            <h2 class="roundCount"></h2>
+        </div>
+
     </div>
     <div class="main">
         <div class="gamebody">
@@ -75,23 +87,21 @@
                 <div class="quarter yellow"></div>
             </div>
             <div class="bottom">
-                <div class="quarter blue"></div>
                 <div class="quarter green"></div>
+                <div class="quarter blue"></div>
             </div>
 
             <br>
 
         </div>
         <br>
-<div class="buttons">
-    <button id="startButton" type="button" class="btn-warning btn-block button 4"><h1>Start</h1></button>
-
-</div>
-
-
+    <div class="buttons">
+        <button id="startButton" type="button" class="btn-warning btn-block button 4"><h1>Start</h1></button>
+        <button id="reStart" type="button" class="btn-warning btn-block button 4"><h1>Restart</h1></button>
 
     </div>
 
+    </div>
 
     <script
             src="https://code.jquery.com/jquery-3.3.1.js"
@@ -101,56 +111,70 @@
     </script>
     <script>
         "use strict";
-        var pattern = [];
+        var simonSays = [];
+        var randomNumber;
 
+        var play;
+        var use;
+//generate a random number
+        function getRandom(){
 
-        $('.red').on('mousedown', function(){
+          randomNumber = Math.floor(Math.random() * 4)+1;
+                console.log(randomNumber + " is a random number");
+                simonSays.push(randomNumber)
+            chooseColor(randomNumber);
+
+            };
+// randomly select a color and pass it to a function
+        function chooseColor()   {
+
+            switch (randomNumber) {
+                case 1 : use = $('.red');
+                    break;
+                case 2 : use = $('.yellow');
+                    break;
+                case 3 : use = $('.green');
+                    break;
+                default: use = $('.blue')
+            }
+        }
+
+// something something fire color panels
+
+function lightPanels(){
+    setTimeout(function(){
+        console.log("timeout message");
+        use.addClass('lit');
+    }, 500);
+
+    setTimeout(function(){
+        console.log("timeout message");
+        use.removeClass('lit');
+    }, 1000);
+
+}
+
+        $('.quarter').on('mousedown', function(){
             console.log("red was clicked");
-            $(this).addClass('dim');
+            $(this).addClass('lit');
 
             });
 
-        $('.red').on('mouseup', function(){
+        $('.quarter').on('mouseup', function(){
             console.log("red was UNclicked");
-            $(this).removeClass('dim');
+            $(this).removeClass('lit');
 
         });
 
-        $('.yellow').on('mousedown', function() {
-            console.log("yellow was clicked");
-            $(this).addClass('dim');
-        });
-
-        $('.yellow').on('mouseup', function(){
-            console.log("yellow was UNclicked");
-            $(this).removeClass('dim');
-        });
-
-        $('.blue').on('mousedown', function(){
-            console.log("blue was clicked");
-            $(this).addClass('dim');
-        });
-
-        $('.blue').on('mouseup', function(){
-            $(this).removeClass('dim');
-        })
-
-        $('.green').on('mousedown', function(){
-            console.log("green was clicked");
-            $(this).addClass('dim');
-
-        });
-
-        $('.green').on('mouseup', function(){
-            $(this).removeClass('dim');
-            });
 
         $('#startButton').on('click', function(){
-            console.log('Start Button was clicked')
-            setTimeout(function(){
-                console.log("timeout message");
-                $('.red').addClass('dim');
-            }, 3000);
+            console.log('Start Button was clicked');
+            getRandom();
+            lightPanels();
+
+
+
+
         });
 
 
@@ -160,3 +184,35 @@
     </script>
 </body>
 </html>
+
+
+///*******************The Scrap Yard****************///
+//
+// $('.yellow').on('mousedown', function() {
+//     console.log("yellow was clicked");
+//     $(this).addClass('lit');
+// });
+//
+// $('.yellow').on('mouseup', function(){
+//     console.log("yellow was UNclicked");
+//     $(this).removeClass('lit');
+// });
+//
+// $('.blue').on('mousedown', function(){
+//     console.log("blue was clicked");
+//     $(this).addClass('lit');
+// });
+//
+// $('.blue').on('mouseup', function(){
+//     $(this).removeClass('lit');
+// })
+//
+// $('.green').on('mousedown', function(){
+//     console.log("green was clicked");
+//     $(this).addClass('lit');
+//
+// });
+//
+// $('.green').on('mouseup', function(){
+//     $(this).removeClass('lit');
+//     });
