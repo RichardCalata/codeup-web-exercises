@@ -52,7 +52,10 @@ let names = [];
 // TODO: rewrite the following using arrow functions
 users.forEach(user => emails.push(user.email);
 users.forEach(user=> names.push(user.name));
-
+// conflate above two functions into one
+users.forEach(user =>{
+  emails.push(user.email);
+  names.push(user.name);
 // TODO: replace `var` with `let` in the following declaration
 var developers = [];
 users.forEach(user => {
