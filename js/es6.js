@@ -35,7 +35,7 @@ const users = [
 // declared as `const`
 const name = 'richard';
 const email = 'richard@email.com';
-const languages = [];
+const languages = ['php', 'javascript'];
 const user = { name, email, }
 
 // TODO: rewrite the object literal using object property shorthand
