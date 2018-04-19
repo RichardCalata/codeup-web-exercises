@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container {
+    background-color: orange;
+    flex-direction: row;
+    padding: 50px;
+
+}
+
+.child {
+    height: 100px;
+    width: 150px;
+    background-color: #282828;
+    color: gold;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+}
+
+.second_body    {
+    background-color: gold;
+}

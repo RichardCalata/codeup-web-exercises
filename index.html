@@ -17,7 +17,7 @@
         }
 
         .gamebody {
-            background-color: #3d2e80 ;
+            background-color: #282828;
             height: 600px;
             width: 600px;
             margin: auto;
@@ -83,12 +83,12 @@
     <div class="main">
         <div class="gamebody">
             <div class="top">
-                <div class="quarter red"></div>
-                <div class="quarter yellow"></div>
+                <div id='0' class="quarter red"></div>
+                <div id='1' class="quarter yellow"></div>
             </div>
             <div class="bottom">
-                <div class="quarter green"></div>
-                <div class="quarter blue"></div>
+                <div id='2' class="quarter green"></div>
+                <div id='3' class="quarter blue"></div>
             </div>
 
             <br>
@@ -111,17 +111,22 @@
     </script>
     <script>
         "use strict";
-        var simonSays = [];
+        var simonArr = [];
+        var userArr = [];
         var randomNumber;
-
         var play;
         var use;
+        var useClick;
+        var id = 0;
+
+
+
 //generate a random number
         function getRandom(){
 
-          randomNumber = Math.floor(Math.random() * 4)+1;
+          randomNumber = Math.floor(Math.random() * 4);
                 console.log(randomNumber + " is a random number");
-                simonSays.push(randomNumber)
+                simonArr.push(randomNumber);
             chooseColor(randomNumber);
 
             };
@@ -129,56 +134,95 @@
         function chooseColor()   {
 
             switch (randomNumber) {
-                case 1 : use = $('.red');
+                case 0 : use = $('.red');
                     break;
-                case 2 : use = $('.yellow');
+                case 1 : use = $('.yellow');
                     break;
-                case 3 : use = $('.green');
+                case 2 : use = $('.green');
                     break;
                 default: use = $('.blue')
             }
         }
 
-// something something fire color panels
+        /// NOT Random color chooser
+        function simonRepeats(ellyment){$('.red').removeClass('lit');
+                simonArr.forEach(function(el){
+                    setTimeout(function(){
+            $("#"+el).addClass('lit');});
 
-function lightPanels(){
-    setTimeout(function(){
-        console.log("timeout message");
-        use.addClass('lit');
-    }, 500);
 
-    setTimeout(function(){
-        console.log("timeout message");
-        use.removeClass('lit');
-    }, 1000);
+        }, 500)
 
-}
+        };
 
+        // convert user click to number to push to userSays []
+
+        function userClick(qColor){
+
+            switch (qColor){
+
+                case 'red' : useClick = 0;
+                    break;
+                case 'yellow': useClick = 1;
+                    break;
+                case 'green' : useClick = 2;
+                    break;
+                default : useClick = 3;
+            }
+        }
+// something something fire color panels "use" color
+
+        function lightPanels(){
+            setTimeout(function(){
+                // console.log("timeout message");
+                use.addClass('lit');
+            }, 500);
+
+            setTimeout(function(){
+                // console.log("timeout message");
+                use.removeClass('lit');
+            }, 1000);
+
+        }
+//listener for user click on color sends corresponding number to userArr[]
         $('.quarter').on('mousedown', function(){
-            console.log("red was clicked");
             $(this).addClass('lit');
-
+            userClick($(this).attr('class').split(' ')[1]);
+            console.log($(this).attr('class').split(' ')[1] + " was clicked");
+            userArr.push(useClick);
+            console.log(userArr);
             });
 
         $('.quarter').on('mouseup', function(){
-            console.log("red was UNclicked");
+            // console.log($(this).attr('class').split(' ')[1] + " was UNclicked");
             $(this).removeClass('lit');
-
         });
 
-
+// selects random color activates color adds corresponding number to simonArr[]
         $('#startButton').on('click', function(){
             console.log('Start Button was clicked');
             getRandom();
             lightPanels();
-
-
-
-
         });
 
 
+function simonSays(){
+    var i =0;
+    var aInterval = setInterval(function(){
+        simonRepeats(i);
+        i++;
+        console.log("simon Says " + i)
+        if (i == simonArr.length){
+            clearInterval(aInterval);
+        }
 
+    }, 1000);
+}
+
+$('#reStart').on('click',function(){
+    simonSays();
+    console.log("restart clicked");
+})
 
 
     </script>
@@ -186,33 +230,33 @@ function lightPanels(){
 </html>
 
 
-///*******************The Scrap Yard****************///
-//
-// $('.yellow').on('mousedown', function() {
-//     console.log("yellow was clicked");
-//     $(this).addClass('lit');
-// });
-//
-// $('.yellow').on('mouseup', function(){
-//     console.log("yellow was UNclicked");
-//     $(this).removeClass('lit');
-// });
-//
-// $('.blue').on('mousedown', function(){
-//     console.log("blue was clicked");
-//     $(this).addClass('lit');
-// });
-//
-// $('.blue').on('mouseup', function(){
-//     $(this).removeClass('lit');
-// })
-//
-// $('.green').on('mousedown', function(){
-//     console.log("green was clicked");
-//     $(this).addClass('lit');
-//
-// });
-//
-// $('.green').on('mouseup', function(){
-//     $(this).removeClass('lit');
-//     });
+<!--///*******************The Scrap Yard****************-->
+<!--//-->
+<!--// $('.yellow').on('mousedown', function() {-->
+<!--//     console.log("yellow was clicked");-->
+<!--//     $(this).addClass('lit');-->
+<!--// });-->
+<!--//-->
+<!--// $('.yellow').on('mouseup', function(){-->
+<!--//     console.log("yellow was UNclicked");-->
+<!--//     $(this).removeClass('lit');-->
+<!--// });-->
+<!--//-->
+<!--// $('.blue').on('mousedown', function(){-->
+<!--//     console.log("blue was clicked");-->
+<!--//     $(this).addClass('lit');-->
+<!--// });-->
+<!--//-->
+<!--// $('.blue').on('mouseup', function(){-->
+<!--//     $(this).removeClass('lit');-->
+<!--// })-->
+<!--//-->
+<!--// $('.green').on('mousedown', function(){-->
+<!--//     console.log("green was clicked");-->
+<!--//     $(this).addClass('lit');-->
+<!--//-->
+<!--// });-->
+<!--//-->
+<!--// $('.green').on('mouseup', function(){-->
+<!--//     $(this).removeClass('lit');-->
+<!--//     });-->
