@@ -2,8 +2,8 @@
 
 "use strict";
     $(document).ready(function() {
-        var secretNumber = Math.floor(Math.random() * 9 + 1);
-        var playerGuess = $("#guess").val();
+        let secretNumber = Math.floor(Math.random() * 9 + 1);
+        let playerGuess = $("#guess").val();
         $("#output").text("the secret number is " +secretNumber);
         // console.log("secret number is " + secretNumber);
         $("#theButton").on("click",function(){
