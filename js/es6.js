@@ -36,30 +36,26 @@ const users = [
 const name = 'richard';
 const email = 'richard@email.com';
 const languages = ['php', 'javascript'];
-const user = { name, email, }
+email = "new@email.com";
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
   name,
   email,
-  languages,
+  languages
 });
 
 // TODO: replace `var` with `let` in the following variable declarations
-var emails = [];
-var names = [];
+let emails = [];
+let names = [];
 
 // TODO: rewrite the following using arrow functions
-  user => {
-  return emails.push(user.email);
-} ;
-users.forEach(function(user) {
-  return names.push(user.name);
-});
+users.forEach(user => emails.push(user.email);
+users.forEach(user=> names.push(user.name));
 
 // TODO: replace `var` with `let` in the following declaration
 var developers = [];
-users.forEach(function(user) {
+users.forEach(user => {
   // TODO: rewrite the code below to use object destructuring assignment
   //       note that you can also use destructuring assignment in the function
   //       parameter definition
